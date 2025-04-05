@@ -1,11 +1,12 @@
-import React from 'react'
-import Navbar from "./Components/Navbar"
 
+import Navbar from "./Components/Navbar"
+/* import Hero_section from "./Components/Hero_section" */
 const App = () => {
   return (
-    <div className=' text-white flex flex-col justify-center items-center'>
+    <div>
       <Navbar />
-      <h1>Mohamed Amine</h1>
+      {/* <Hero_section /> */}
+      
     </div>
   )
 }
