@@ -1,2 +1,16 @@
+@font-face{
+    font-family: Quick Tomn;
+    src: url(../src/assets/Fonts/Quick\ Town.ttf)
+}
+@font-face{
+    font-family: Montserrat;
+    src: url(../src/assets/Fonts/Montserrat-VariableFont_wght.ttf)
+}
+
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@538&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@theme{
+    --font-Quick : Quick Tomn , "sans-serif";
+    --font-Montserrat : Montserrat , "sans-serif";
+}

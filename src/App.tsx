@@ -1,11 +1,12 @@
 
 import Navbar from "./Components/Navbar"
+import Hero_section from "./Components/Hero_section"
 /* import Hero_section from "./Components/Hero_section" */
 const App = () => {
   return (
-    <div>
+    <div >
       <Navbar />
-      {/* <Hero_section /> */}
+      <Hero_section />
       
     </div>
   )
