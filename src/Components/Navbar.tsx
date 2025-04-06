@@ -7,19 +7,19 @@ const Navbar = () => {
 
     return (
       
-      <nav className='flex'>
+      <nav className='w-[100%] h-[18vh]'>
         <div>
-          <img src={logo} alt="Logo" className="h-[150px] w-auto flex justify-center items-center fixed" />
+          <img src={logo} alt="Logo" className="h-[120px] w-auto flex justify-center items-center fixed" />
         </div>
         
-        <div className='w-[73px] h-[53px] bg-[#EC5938] rounded-[20px] flex justify-center items-center fixed top-[40px] right-[30px] cursor-pointer z-2'>
-          <i className= {`bx  text-[54px] text-[#F5EAE4]' ${isOpen ? 'bx-x' : 'bx-menu-alt-right'}`} onClick={() => setIsOpen(!isOpen)}></i>
+        <div className='w-[65px] h-[45px] bg-[#EC5938] rounded-[15px] flex justify-center items-center fixed top-[40px] right-[30px] cursor-pointer z-2'>
+          <i className= {`bx  max-md:text-[35px] text-[45px] text-[#F5EAE4]' ${isOpen ? 'bx-x' : 'bx-menu-alt-right'}`} onClick={() => setIsOpen(!isOpen)}></i>
         </div>
 
         {isOpen && (
-          <div className={`h-[53px] w-[700px] bg-[#F5EAE4] text-[#0D0D0D] flex justify-center items-center pt-[15px] pb-[15px] pr-[50px] pl-[30px] font-medium rounded-[20px] fixed top-[40px] right-[70px] transition-all duration-[15000ms] ease-in-out z-1 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`} >
-            <ul className='flex gap-[30px]'>
-              <li><a href="App.tsx" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} >Home</a></li>
+          <div className={`max-md:hidden h-[45px] w-[600px] text-[14px] bg-[#F5EAE4] text-[#0D0D0D] flex justify-center items-center pt-[15px] pb-[15px] pr-[50px] pl-[30px] font-medium rounded-[20px] fixed top-[40px] right-[70px] transition-all duration-[15000ms] ease-in-out z-1 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`} >
+            <ul className='flex gap-[30px] '>
+              <li><a href="App.tsx" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)}>Home</a></li>
               <li><a href="#" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} >About Me</a></li>
               <li><a href="#" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} >Skills</a></li>
               <li><a href="#" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} >Projects</a></li>
@@ -27,6 +27,19 @@ const Navbar = () => {
             </ul>
           </div>
         )}
+
+      {isOpen && (
+          <div className={`md:hidden h-[50px] w-[270px] text-[14px] bg-[#F5EAE4] text-[#0D0D0D] flex justify-center items-center font-medium rounded-[15px] rounded-l-none fixed top-[190px] -right-[71px] transform rotate-z-90`} >
+            <ul className='flex gap-[15px] '>
+              <li><a href="App.tsx" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)}><i className='bx bx-home transform -rotate-z-90'></i></a></li>
+              <li><a href="#" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} ><i className='bx bx-user transform -rotate-z-90'></i></a></li>
+              <li><a href="#" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} ><i className='bx bx-brain transform -rotate-z-90'></i></a></li>
+              <li><a href="#" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} ><i className='bx bx-folder-open transform -rotate-z-90'></i></a></li>
+              <li><a href="#" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} ><i className='bx bx-phone transform -rotate-z-90'></i></a></li>
+            </ul>
+          </div>
+        )}
+
 
       </nav>
       
