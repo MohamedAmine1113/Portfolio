@@ -2,9 +2,10 @@ import 'boxicons/css/boxicons.min.css';
 import logo from '../assets/Images/logo-bg-remover.png'; 
 import React, { useState } from 'react';
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  
     return (
       
       <nav className='w-[100%] h-[18vh]'>
@@ -17,7 +18,7 @@ const Navbar = () => {
         </div>
 
         {isOpen && (
-          <div className={`max-md:hidden h-[45px] w-[600px] text-[14px] bg-[#F5EAE4] text-[#0D0D0D] flex justify-center items-center pt-[15px] pb-[15px] pr-[50px] pl-[30px] font-medium rounded-[20px] fixed top-[40px] right-[70px] transition-all duration-[15000ms] ease-in-out z-1 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`} >
+          <div className={`max-md:hidden h-[45px] w-[600px] text-[14px] bg-[#F5EAE4] text-[#0D0D0D] flex justify-center items-center pt-[15px] pb-[15px] pr-[50px] pl-[30px] font-medium rounded-[15px] rounded-r-none fixed top-[40px] right-[70px] transition-all duration-[15000ms] ease-in-out z-1 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`} >
             <ul className='flex gap-[30px] '>
               <li><a href="App.tsx" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)}>Home</a></li>
               <li><a href="#" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} >About Me</a></li>

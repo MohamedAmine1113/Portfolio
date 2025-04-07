@@ -1,14 +1,15 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
 
+
 const Hero_section = () => {
   return (
     <div>
-      <div className='h-[65vh] w-[100%] font-Quick flex justify-center flex-col pt-[30px]'>
-        <span className='text-[45px] pl-[40px] max-md:text-[30px]' >Hi! My Name is</span>
-        <span className='text-[115px] text-center max-md:text-[60px]' >Mohamed Amine Bahmane</span>
-        <span className='text-[45px] pl-[40px] max-md:text-[30px]'  >I<span className='text-[#EC5938]'>’</span>m a </span>
-        <span className=' pl-[200px] -mt-[50px] text-[50px] text-[#EC5938] max-md:text-[30px] max-md:pl-[120px] max-md:-mt-[20px]'>
+      <div className='h-[65vh] w-full font-Quick flex justify-center flex-col pt-[30px]'>
+        <span className='text-clamp1 pl-[40px]' >Hi! My Name is</span>
+        <span className="text-clamp2 text-center">Mohamed Amine Bahmane </span>
+        <span className='text-clamp1 pl-[40px] max-md:text-[30px]'  >I<span className='text-[#EC5938]'>’</span>m a </span>
+        <span className=' pl-[200px] -mt-[50px] text-clamp3 text-[#EC5938] max-md:pl-[120px] max-md:-mt-[20px]'>
           <TypeAnimation 
             sequence={[
               // Same substring at the start will only be typed out once, initially

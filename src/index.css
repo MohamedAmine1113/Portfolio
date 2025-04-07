@@ -1,16 +1,33 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .text-clamp1 {
+       font-size: clamp(30px, 8vw, 45px);
+    }
+    .text-clamp2{
+        font-size: clamp(60px, 8vw, 115px);
+    }
+    .text-clamp3{
+        font-size: clamp(30px, 8vw, 50px);
+    }
+  }
+
 @font-face{
     font-family: Quick Tomn;
     src: url(../src/assets/Fonts/Quick\ Town.ttf)
 }
 @font-face{
-    font-family: Montserrat;
-    src: url(../src/assets/Fonts/Montserrat-VariableFont_wght.ttf)
+    font-family: Poppins;
+    src: url(../src/assets/Fonts/Poppins-Medium.ttf)
 }
 
-@import "tailwindcss";
+
 
 
 @theme{
     --font-Quick : Quick Tomn , "sans-serif";
-    --font-Montserrat : Montserrat , "sans-serif";
+    --font-Poppins : Poppins , "sans-serif";
 }
