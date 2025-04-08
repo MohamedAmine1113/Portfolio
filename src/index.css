@@ -13,6 +13,10 @@
     .text-clamp3{
         font-size: clamp(30px, 8vw, 50px);
     }
+
+    .text-clamp-about-title{
+        font-size: clamp(25px, 8vw, 35px);
+    }
   }
 
 @font-face{

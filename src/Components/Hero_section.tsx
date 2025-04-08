@@ -13,9 +13,9 @@ const Hero_section = () => {
           <TypeAnimation 
             sequence={[
               // Same substring at the start will only be typed out once, initially
-              'Frontend-developer',
+              'Frontend Developer',
               1000, // wait 1s before replacing "Mice" with "Hamsters"
-              'UI/UX Designer',
+              'Web Designer',
               1000
             ]}
             repeat={Infinity}
@@ -27,8 +27,6 @@ const Hero_section = () => {
         <i className='bx bxl-github'></i>
         <i className='bx bxl-linkedin'></i>
         <i className='bx bx-envelope' ></i>
-        <i className='bx bxl-whatsapp'></i>
-        <i className='bx bxl-instagram' ></i>
       </div>
     </div>
   )
