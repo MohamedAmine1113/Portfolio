@@ -1,26 +1,20 @@
 import React from 'react'
-import { TypeAnimation } from 'react-type-animation';
+import Marquee from 'react-fast-marquee'
 
 
 const Hero_section = () => {
   return (
     <div>
-      <div className='h-[65vh] w-full font-Quick flex justify-center flex-col pt-[30px]'>
-        <span className='text-clamp1 pl-[40px]' >Hi! My Name is</span>
-        <span className="text-clamp2 text-center">Mohamed Amine Bahmane </span>
-        <span className='text-clamp1 pl-[40px] max-md:text-[30px]'  >I<span className='text-[#EC5938]'>’</span>m a </span>
-        <span className=' pl-[200px] -mt-[50px] text-clamp3 text-[#EC5938] max-md:pl-[120px] max-md:-mt-[20px]'>
-          <TypeAnimation 
-            sequence={[
-              // Same substring at the start will only be typed out once, initially
-              'Frontend Developer',
-              1000, // wait 1s before replacing "Mice" with "Hamsters"
-              'Web Designer',
-              1000
-            ]}
-            repeat={Infinity}
-          />
-      </span>
+      <div className='h-[65vh] w-full  pt-[30px] font-Quick'>
+        <Marquee pauseOnHover direction='right' speed={150} className='-mt-[60px]' >
+          <span className='w-full h-[15vh] text-clamp2 max-md:pl-[120px] max-md:-mt-[20px] uppercase text-outline'>Web Designer & Frontend Developer</span>
+        </Marquee>
+        <div className='h-[40vh] pl-[40px] pb-[10px] flex justify-end flex-col text-[30px] '>
+          <span className='' >Hi<span className='text-[#EC5938]'>!</span></span>
+          <span className=''>My Name is</span>
+          <span className='uppercase text-[#EC5938]'>Mohamed amine bahmane</span>
+          <span className=''>I Build Clean & Functional Web Experiences</span>
+        </div>
       </div>
 
       <div className='flex justify-center gap-[30px] text-[20px] cursor-pointer mt-[60px]'>

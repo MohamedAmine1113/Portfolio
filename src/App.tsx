@@ -6,7 +6,7 @@ import About from './Components/About'
 
 const App = () => {
   return (
-    <div >
+    <div id="Home" >
       <Navbar />
       <Hero_section />
       <About />
