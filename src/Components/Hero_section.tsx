@@ -1,6 +1,6 @@
 import React from 'react'
 import Marquee from 'react-fast-marquee'
-
+import { TypeAnimation } from 'react-type-animation';
 
 const Hero_section = () => {
   return (
@@ -9,11 +9,25 @@ const Hero_section = () => {
         <Marquee pauseOnHover direction='right' speed={150} className='-mt-[60px]' >
           <span className='w-full h-[15vh] text-clamp2 max-md:pl-[120px] max-md:-mt-[20px] uppercase text-outline'>Web Designer & Frontend Developer</span>
         </Marquee>
-        <div className='h-[40vh] pl-[40px] pb-[10px] flex justify-end flex-col text-[30px] '>
-          <span className='' >Hi<span className='text-[#EC5938]'>!</span></span>
-          <span className=''>My Name is</span>
+        <div className='h-[40vh] md:pl-[40px] max-md:pl-[10px] max-md:text-[25px] pb-[10px] flex justify-end flex-col text-[30px] '>
+          <span >Hi<span className='text-[#EC5938]'>!</span></span>
+          <span >My Name is</span>
           <span className='uppercase text-[#EC5938]'>Mohamed amine bahmane</span>
-          <span className=''>I Build Clean & Functional Web Experiences</span>
+          <span >
+            Crafting 
+            <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed out once, initially
+                  ' Clean ',
+                  1000, // wait 1s before replacing "Mice" with "Hamsters"
+                  ' Functional ',
+                  1000
+                ]}
+                cursor={false}
+                repeat={Infinity}
+              /> 
+            Web Experiences
+            </span>
         </div>
       </div>
 
