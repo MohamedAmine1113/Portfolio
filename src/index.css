@@ -46,3 +46,13 @@
     -webkit-text-stroke: 2px #F5EAE4;
     color: transparent;
   }
+
+
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 6px;
+    border:1px solid rgba(255, 255, 255, 0.20);
+
+}

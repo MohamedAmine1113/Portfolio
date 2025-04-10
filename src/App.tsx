@@ -2,6 +2,7 @@ import './index.css'
 import Navbar from "./Components/Navbar"
 import Hero_section from "./Components/Hero_section"
 import About from './Components/About'
+import Skills from './Components/Skills_section'
 
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
       <Navbar />
       <Hero_section />
       <About />
+      <Skills />
       
     </div>
   )
