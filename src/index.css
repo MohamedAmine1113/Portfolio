@@ -56,7 +56,3 @@
     border:1px solid rgba(255, 255, 255, 0.20);
 
 }
-.work-1 , .work-2 ,.work-3{
-    position: sticky;
-    top: 100px;
-}
