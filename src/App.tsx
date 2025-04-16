@@ -1,9 +1,10 @@
 import './index.css'
 import Navbar from "./Components/Navbar"
-import Hero_section from "./Components/Hero_section"
+import Hero from "./Components/Hero_section"
 import About from './Components/About'
 import Skills from './Components/Skills_section'
 import Work from './Components/Work_section'
+import Contact from './Components/Contact_section'
 
 
 
@@ -11,10 +12,12 @@ const App = () => {
   return (
     <div id="Home" >
       <Navbar />
-      <Hero_section />
+      <Hero />
       <About />
       <Skills />
       <Work />
+      <Contact />
+      
       
     </div>
   )
