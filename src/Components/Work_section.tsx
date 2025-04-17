@@ -10,7 +10,7 @@ const Work_section = () => {
     
 
   return (
-    <div id='Work_section' className='w-[70%] h-[100vh] max-lg:h-[50%] max-md:h-[30%] max-lg:w-[80%] max-md:w-full mt-[150px] max-md:mt-[80px] max-lg:mt-[100px] flex justify-center items-center flex-col m-auto'>
+    <div id='Work_section' className='w-[70%] h-[100vh] max-lg:h-[50%] max-md:h-[30%] max-lg:w-[80%] max-md:w-full mt-[120px] max-md:mt-[80px] max-lg:mt-[100px] flex justify-center items-center flex-col m-auto'>
         <div className='font-Quick text-clamp-titles mb-[40px]'>
             <h1 >Works</h1>
         </div>

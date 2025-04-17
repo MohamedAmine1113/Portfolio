@@ -1,11 +1,11 @@
 import 'boxicons/css/boxicons.min.css';
 /* import logo from '../assets/Images/logo-bg-remover.png';  */
-import React, { useState } from 'react';
+/* import React, { useState } from 'react'; */
 
 
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  /* const [isOpen, setIsOpen] = useState(false); */
   
     return (
       
@@ -14,8 +14,16 @@ const Navbar = () => {
           <h1 className='font-Quick before:content-["{"] after:content-["}"] text-[30px] cursor-pointer '>MBH.</h1>
           {/* <img src={logo} alt="Logo" className="h-[120px] w-auto flex justify-center items-center fixed" /> */}
         </div>
+
+        <div className={`h-[45px] w-[500px] text-[14px] flex justify-center items-center font-medium rounded-[15px] rounded-r-none fixed top-[30px] -right-[160px] max-md:-right-[180px] z-100`} >
+              <ul className='flex flex-col'>
+                <li><a href='#About-section' className='transition duration-700 ease-in-out'  >About</a></li>
+                <li><a href="#Work_section" className='transition duration-700 ease-in-out'  >Work</a></li>
+                <li><a href="#Contact-section" className='transition duration-700 ease-in-out'>Contact</a></li>
+              </ul>
+            </div>
         
-        <div className=' flex justify-center items-center fixed top-[30px] right-[30px] cursor-pointer z-1000'>
+        {/* <div className=' flex justify-center items-center fixed top-[30px] right-[30px] cursor-pointer z-1000'>
           <i className= {`bx  max-md:text-[35px] text-[45px]  ' ${isOpen ? 'bx-x bg-[#F5EAE4] text-[#0D0D0D] md:rounded-r-[15px] max-md:rounded-t-[15px] max-md:w-[50px] max-md:text-center' : 'bx-menu-alt-right text-[#F5EAE4]'}`} onClick={() => setIsOpen(!isOpen)}></i>
         </div>
 
@@ -25,7 +33,7 @@ const Navbar = () => {
                 <li><a href="#Home" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)}>Home</a></li>
                 <li><a href='#About-section' className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} >About Me</a></li>
                 <li><a href="#Work_section" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} >Work</a></li>
-                <li><a href="#" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} >Contact Me</a></li>
+                <li><a href="#Contact-section" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} >Contact Me</a></li>
               </ul>
             </div>
         
@@ -37,10 +45,12 @@ const Navbar = () => {
                 <li><a href="#Home" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)}><i className='bx bx-home transform -rotate-z-90'></i></a></li>
                 <li><a href="#About-section" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} ><i className='bx bx-user transform -rotate-z-90'></i></a></li>
                 <li><a href="#Work_section" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} ><i className='bx bx-folder-open transform -rotate-z-90'></i></a></li>
-                <li><a href="#" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} ><i className='bx bx-phone transform -rotate-z-90'></i></a></li>
+                <li><a href="#Contact-section" className='hover:bg-[#0D0D0D] hover:text-[#F5EAE4] p-[10px] rounded-[10px] transition duration-700 ease-in-out' onClick={() => setIsOpen(false)} ><i className='bx bx-phone transform -rotate-z-90'></i></a></li>
               </ul>
             </div>
-        )}
+        )} */}
+
+
       </nav>
   )
 }
