@@ -1,25 +1,52 @@
 import 'boxicons/css/boxicons.min.css';
 /* import logo from '../assets/Images/logo-bg-remover.png';  */
 /* import React, { useState } from 'react'; */
+import React from 'react';
+import { gsap } from 'gsap/gsap-core';
 
 
 
-const Navbar = () => {
+
+const Navbar  = () => {
   /* const [isOpen, setIsOpen] = useState(false); */
-  
+      const handleEnter = () => {
+        gsap.to('#cursor', { scale: 3,color: '#0D0D0D', duration: 0.3 })
+      }
+      const handleLeave = () => {
+        gsap.to('#cursor', { scale: 1, duration: 0.3 })
+      }
+      
+      const handleEnterLink = () => {
+        gsap.to('#cursor', { scale: 1.5, duration: 0.3 })
+      }
+      const handleLeaveLink = () => {
+        gsap.to('#cursor', { scale: 1, duration: 0.3 })
+      }
+
+      
     return (
+     
       
       <nav className='w-[100%] h-[18vh]'>
         <div className='fixed top-[30px] left-[30px] z-100'>
-          <h1 className='font-Quick before:content-["{"] after:content-["}"] text-[30px] cursor-pointer '>MBH.</h1>
+          <h1 
+              className='font-Quick before:content-["{"] after:content-["}"] text-[30px] cursor-pointer'
+              onMouseEnter={handleEnter}
+              onMouseLeave={handleLeave}
+          >
+            MBH.
+          </h1>
           {/* <img src={logo} alt="Logo" className="h-[120px] w-auto flex justify-center items-center fixed" /> */}
         </div>
 
         <div className={`h-[45px] w-[500px] text-[14px] flex justify-center items-center font-medium rounded-[15px] rounded-r-none fixed top-[30px] -right-[160px] max-md:-right-[180px] z-100`} >
               <ul className='flex flex-col'>
-                <li><a href='#About-section' className='transition duration-700 ease-in-out'  >About</a></li>
-                <li><a href="#Work_section" className='transition duration-700 ease-in-out'  >Work</a></li>
-                <li><a href="#Contact-section" className='transition duration-700 ease-in-out'>Contact</a></li>
+                <li><a href='#About-section' className=' transition duration-700 ease-in-out hover:-translate-y-[-5vw]' onMouseEnter={handleEnterLink}
+              onMouseLeave={handleLeaveLink} >About</a></li>
+                <li><a href="#Work_section" className='transition duration-700 ease-in-out' onMouseEnter={handleEnterLink}
+              onMouseLeave={handleLeaveLink}>Work</a></li>
+                <li><a href="#Contact-section" className='transition duration-700 ease-in-out' onMouseEnter={handleEnterLink}
+              onMouseLeave={handleLeaveLink}>Contact</a></li>
               </ul>
             </div>
         
