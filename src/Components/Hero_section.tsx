@@ -1,23 +1,62 @@
 import React from 'react'
 import Marquee from 'react-fast-marquee'
 import { TypeAnimation } from 'react-type-animation';
+import { gsap } from 'gsap/gsap-core';
 
 const Hero_section = () => {
+
+   const handleEnter = (s : number) => {
+        gsap.to('#cursor', { scale: s, duration: 0.3 })
+        console.log('Enter');
+      }
+      const handleLeave = () => {
+        gsap.to('#cursor', { scale: 1, duration: 0.3 })
+      }
+
   return (
     <div>
-      <div className='h-[65vh] w-full  pt-[30px] font-Quick'>
+      <div className='h-[65vh]  pt-[30px] font-Quick'>
         
-      <Marquee direction="right" speed={80} className="-mt-[60px] max-md:-mt-[30px]">
-        <span className="w-full h-[15vh] text-clamp2 max-md:pl-[100px] uppercase text-outline">
+      <Marquee direction="right" speed={80} className="-mt-[60px] max-md:-mt-[30px]"  >
+        <span className="w-full h-[15vh] text-clamp2 max-md:pl-[100px] uppercase text-outline" onMouseEnter={() => handleEnter(8)} onMouseLeave={handleLeave} >
           Web Designer&nbsp;& Frontend Developer &&nbsp;
         </span>
       </Marquee>
 
-        <div className='h-[40vh] md:pl-[40px] max-md:pl-[10px] max-md:text-[25px] pb-[10px] flex justify-end flex-col text-[30px] font-[200]'>
-          <span >Hi<span className='text-[#EC5938]'>!</span></span>
-          <span >My Name is</span>
-          <span className='uppercase text-[#EC5938]'>Mohamed amine bahmane</span>
-          <span >
+        <div className='w-fit h-[40vh] md:pl-[40px] max-md:pl-[10px] max-md:text-[25px] pb-[10px] flex justify-end flex-col text-[30px] font-[200] z-1'>
+          <span 
+              className='z-10 '
+              onMouseEnter={() => handleEnter(2)}
+              onMouseLeave={handleLeave} 
+          >
+            Hi
+            <span 
+              className='text-[#EC5938] z-10 '
+            >
+              !
+            </span>
+          </span>
+
+          <span 
+              className='z-10'
+              onMouseEnter={() => handleEnter(2)}
+              onMouseLeave={handleLeave}  
+          >  
+            My Name is
+          </span>
+
+          <span 
+              className='uppercase text-[#EC5938] z-10' 
+              onMouseEnter={() => handleEnter(2)}
+              onMouseLeave={handleLeave} 
+          >
+            Mohamed amine bahmane
+          </span>
+          <span 
+              className='z-10'
+              onMouseEnter={() => handleEnter(2)}
+              onMouseLeave={handleLeave} 
+          >
             Crafting 
             <TypeAnimation
                 sequence={[
@@ -35,9 +74,10 @@ const Hero_section = () => {
         </div>
       </div>
 
-      <div className='flex justify-center gap-[30px] text-[20px] cursor-pointer mt-[60px]'>
-        <i className='bx bxl-github'></i>
-        <i className='bx bxl-linkedin'></i>
+       
+       <div className='flex justify-center gap-[30px] text-[20px] cursor-pointer mt-[60px]'>
+        <i className='bx bxl-github' ></i>
+        <i className='bx bxl-linkedin' ></i>
         <i className='bx bx-envelope' ></i>
       </div>
     </div>

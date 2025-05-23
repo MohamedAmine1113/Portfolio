@@ -13,13 +13,15 @@ const App = () => {
   
   return (
     <div id="Home" >
+      <CursorMotion />
       <Navbar  />
       <Hero />
       <About />
       <Skills />
       <Work />
       <Contact />
-      <CursorMotion />
+      
+     
       
       
     </div>
