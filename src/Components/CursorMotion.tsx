@@ -10,7 +10,6 @@ const CursorMotion= () => {
             gsap.to(cursor, {
                 x: e.clientX - 30 / 2 ,
                 y: e.clientY - 30 / 2 ,
-                duration: 0.3,
                 delay: 0,
                 ease: 'power4.out',
                 backgroundColor: '#EC5938',
@@ -26,7 +25,7 @@ const CursorMotion= () => {
     
   return (
     <div>
-         <div id="cursor" className="fixed top-0 left-0 h-[30px] w-[30px] rounded-full pointer-events-none" />
+         <div id="cursor" className="fixed top-0 left-0 h-[30px] w-[30px] rounded-full pointer-events-none -z-10" />
          
     </div>
     

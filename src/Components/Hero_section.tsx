@@ -6,11 +6,11 @@ import { gsap } from 'gsap/gsap-core';
 const Hero_section = () => {
 
    const handleEnter = (s : number) => {
-        gsap.to('#cursor', { scale: s, duration: 0.3 })
+        gsap.to('#cursor', { scale: s, duration: 0.5 })
         console.log('Enter');
       }
       const handleLeave = () => {
-        gsap.to('#cursor', { scale: 1, duration: 0.3 })
+        gsap.to('#cursor', { scale: 1, duration: 0.5 })
       }
 
   return (
@@ -23,22 +23,22 @@ const Hero_section = () => {
         </span>
       </Marquee>
 
-        <div className='w-fit h-[40vh] md:pl-[40px] max-md:pl-[10px] max-md:text-[25px] pb-[10px] flex justify-end flex-col text-[30px] font-[200] z-1'>
+        <div className='w-fit h-[40vh] md:pl-[40px] max-md:pl-[10px] max-md:text-[25px] pb-[10px] flex justify-end flex-col text-[30px] font-[200] '>
           <span 
-              className='z-10 '
+            
               onMouseEnter={() => handleEnter(2)}
               onMouseLeave={handleLeave} 
           >
             Hi
             <span 
-              className='text-[#EC5938] z-10 '
+              className='text-[#EC5938]  '
             >
               !
             </span>
           </span>
 
           <span 
-              className='z-10'
+             
               onMouseEnter={() => handleEnter(2)}
               onMouseLeave={handleLeave}  
           >  
@@ -46,14 +46,14 @@ const Hero_section = () => {
           </span>
 
           <span 
-              className='uppercase text-[#EC5938] z-10' 
+              className='uppercase text-[#EC5938] ' 
               onMouseEnter={() => handleEnter(2)}
               onMouseLeave={handleLeave} 
           >
             Mohamed amine bahmane
           </span>
           <span 
-              className='z-10'
+              
               onMouseEnter={() => handleEnter(2)}
               onMouseLeave={handleLeave} 
           >

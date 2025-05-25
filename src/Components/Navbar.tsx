@@ -11,11 +11,11 @@ const Navbar  = () => {
   
   /* const [isOpen, setIsOpen] = useState(false); */
       const handleEnter = (s : number) => {
-        gsap.to('#cursor', { scale: s, duration: 0.3 })
+        gsap.to('#cursor', { scale: s, duration: 0.5 })
       }
       const handleLeave = () => {
         
-        gsap.to('#cursor', { scale: 1, duration: 0.3 })
+        gsap.to('#cursor', { scale: 1, duration: 0.5 })
       }
       
       
