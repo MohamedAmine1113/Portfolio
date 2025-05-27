@@ -8,6 +8,8 @@ const Hero_section = () => {
     const cursor = useCursor();
     const scaleCursor = cursor!.scaleCursor;
     const resetCursor = cursor!.resetCursor;
+  
+    
 
    
 
@@ -28,7 +30,8 @@ const Hero_section = () => {
           >
             Hi
             <span 
-              className='text-[#EC5938]  '
+              className='text-[#EC5938]'
+              
             >
               !
             </span>
@@ -43,9 +46,9 @@ const Hero_section = () => {
           </span>
 
           <span 
-              className='uppercase text-[#EC5938] ' 
-              onMouseEnter={() => scaleCursor(2)} 
-              onMouseLeave={() => resetCursor(1)}
+              className=' uppercase text-[#EC5938] ' 
+              onMouseEnter={() => {scaleCursor(2)}} 
+              onMouseLeave={() => {resetCursor(1)}}
           >
             Mohamed amine bahmane
           </span>

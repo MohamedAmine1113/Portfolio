@@ -1,37 +1,35 @@
-import React, { useRef , useEffect } from 'react'
+import React  from 'react'
 import ECO from '../assets/Images/ECO.png'
-import { gsap } from 'gsap';
+import { useCursor } from './CursorMotion';
 
 
 const Work_section = () => {
-    const cursorRef = useRef<HTMLElement | null>(null);
+    /* const cursorRef = useRef<HTMLDivElement | null>(null);
+
     useEffect(() => {
-        cursorRef.current = document.getElementById('cursor');  }, []
-        
-    );
-       
-    const handleEnter = (s : number , z : number) => {
-        if (cursorRef.current) {
-            cursorRef.current.style.zIndex = `${z}`; // Ensure the cursor is above other elements
-            gsap.to(cursorRef.current, { scale: s, duration: 0.5 })
-        }
-      }
-      
-    const handleLeave = (z : number) => {
+        cursorRef.current = document.getElementById('cursor') as HTMLDivElement | null;
+        console.log(cursorRef.current)
+    },[]) */
+
+    /* const setZIndex  = (z : number) => {
         if (cursorRef.current) {
             cursorRef.current.style.zIndex = `${z}`;
-            gsap.to(cursorRef.current, { scale: 1, duration: 0.5 })
         }
-      }
+    }
+     */
+    const cursor = useCursor();
+    const scaleCursor = cursor!.scaleCursor;
+    const resetCursor = cursor!.resetCursor;
+    const setIndex = cursor!.setZIndex
 
   return (
     <div id='Work_section' className='w-[70%] h-[100vh] max-lg:h-[60vh] flex flex-col justify-center items-center mt-[90px] m-auto  max-lg:h-[50%] max-md:h-[30%] max-lg:w-[80%] max-md:w-full  max-lg:mt-[10px]'>
 
         <div className='font-Quick text-clamp-titles mb-[40px] mt-[60px]'>
-            <h1 onMouseEnter={() => handleEnter(3 , -10)} onMouseLeave={() => handleLeave(-10)}>Works</h1>
+            <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Works</h1>
         </div>
 
-        <div className='bg-[#F5EAE4] text-[#0D0D0D] w-[80%] h-[75vh] max-md:h-[30vh] max-lg:h-[30vh] rounded-[15px] flex justify-center items-center flex-col gap-[10px] max-lg:gap-[5px] mb-[100px] cursor-pointer' onMouseEnter={() => handleEnter(4,10)} onMouseLeave={() => handleLeave(-10)}>
+        <div className='bg-[#F5EAE4] text-[#0D0D0D] w-[80%] h-[75vh] max-md:h-[30vh] max-lg:h-[30vh] rounded-[15px] flex justify-center items-center flex-col gap-[10px] max-lg:gap-[5px] mb-[100px] cursor-pointer' onMouseEnter={() => {scaleCursor(4); setIndex(10)}} onMouseLeave={() => {resetCursor(1); setIndex(-10)}}>
             <div className='w-[95%] h-[73%] mt-[10px] max-md:mt-[10px] max-lg:mt-[10px] '>
                 <img src={ECO} alt="lkjih" className='rounded-[15px]' />
             </div>
