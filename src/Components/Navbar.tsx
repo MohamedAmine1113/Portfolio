@@ -2,7 +2,7 @@ import 'boxicons/css/boxicons.min.css';
 /* import logo from '../assets/Images/logo-bg-remover.png';  */
 /* import React, { useState } from 'react'; */
 import React from 'react';
-import { gsap } from 'gsap/gsap-core';
+import { useCursor } from './CursorMotion';
 
 
 
@@ -10,13 +10,9 @@ import { gsap } from 'gsap/gsap-core';
 const Navbar  = () => {
   
   /* const [isOpen, setIsOpen] = useState(false); */
-      const handleEnter = (s : number) => {
-        gsap.to('#cursor', { scale: s, duration: 0.5 })
-      }
-      const handleLeave = () => {
-        
-        gsap.to('#cursor', { scale: 1, duration: 0.5 })
-      }
+      const cursor = useCursor();
+      const scaleCursor = cursor!.scaleCursor;
+      const resetCursor = cursor!.resetCursor;
       
       
 
@@ -28,8 +24,8 @@ const Navbar  = () => {
         <div className='fixed top-[30px] left-[30px] z-100'>
           <h1 
               className={`font-Quick before:content-["{"] after:content-["}"] text-[30px] cursor-pointer `}
-              onMouseEnter={() => handleEnter(4)}
-              onMouseLeave={handleLeave}
+              onMouseEnter={() => scaleCursor(4)} 
+              onMouseLeave={() => resetCursor(1)}
           >
             MBH.
           </h1>
@@ -38,12 +34,12 @@ const Navbar  = () => {
 
         <div className={`h-[45px] w-[500px] text-[14px] flex justify-center items-center font-medium rounded-[15px] rounded-r-none fixed top-[30px] -right-[160px] max-md:-right-[180px] z-100`} >
               <ul className='flex flex-col'>
-                <li><a href='#About-section' className=' transition duration-700 ease-in-out hover:-translate-y-[-5vw]' onMouseEnter={() => handleEnter(1.5)}
-              onMouseLeave={handleLeave} >About</a></li>
-                <li><a href="#Work_section" className='transition duration-700 ease-in-out' onMouseEnter={() => handleEnter(1.5)}
-              onMouseLeave={handleLeave}>Work</a></li>
-                <li><a href="#Contact-section" className='transition duration-700 ease-in-out' onMouseEnter={() => handleEnter(1.5)}
-              onMouseLeave={handleLeave}>Contact</a></li>
+                <li><a href='#About-section' className=' transition duration-700 ease-in-out hover:-translate-y-[-5vw]' onMouseEnter={() => scaleCursor(1.5)} 
+              onMouseLeave={() => resetCursor(1)} >About</a></li>
+                <li><a href="#Work_section" className='transition duration-700 ease-in-out' onMouseEnter={() => scaleCursor(1.5)} 
+              onMouseLeave={() => resetCursor(1)}>Work</a></li>
+                <li><a href="#Contact-section" className='transition duration-700 ease-in-out' onMouseEnter={() => scaleCursor(1.5)} 
+              onMouseLeave={() => resetCursor(1)}>Contact</a></li>
               </ul>
             </div>
         

@@ -1,33 +1,30 @@
 import React from 'react'
 import Marquee from 'react-fast-marquee'
 import { TypeAnimation } from 'react-type-animation';
-import { gsap } from 'gsap/gsap-core';
+import { useCursor } from './CursorMotion';
 
 const Hero_section = () => {
 
-   const handleEnter = (s : number) => {
-        gsap.to('#cursor', { scale: s, duration: 0.5 })
-        console.log('Enter');
-      }
-      const handleLeave = () => {
-        gsap.to('#cursor', { scale: 1, duration: 0.5 })
-      }
+    const cursor = useCursor();
+    const scaleCursor = cursor!.scaleCursor;
+    const resetCursor = cursor!.resetCursor;
+
+   
 
   return (
     <div>
       <div className='h-[65vh]  pt-[30px] font-Quick'>
         
       <Marquee direction="right" speed={80} className="-mt-[60px] max-md:-mt-[30px]"  >
-        <span className="w-full h-[15vh] text-clamp2 max-md:pl-[100px] uppercase text-outline" onMouseEnter={() => handleEnter(8)} onMouseLeave={handleLeave} >
+        <span className="w-full h-[15vh] text-clamp2 max-md:pl-[100px] uppercase text-outline" onMouseEnter={() => scaleCursor(8)} onMouseLeave={() => resetCursor(1)} >
           Web Designer&nbsp;& Frontend Developer &&nbsp;
         </span>
       </Marquee>
 
         <div className='w-fit h-[40vh] md:pl-[40px] max-md:pl-[10px] max-md:text-[25px] pb-[10px] flex justify-end flex-col text-[30px] font-[200] '>
           <span 
-            
-              onMouseEnter={() => handleEnter(2)}
-              onMouseLeave={handleLeave} 
+              onMouseEnter={() => scaleCursor(2)} 
+              onMouseLeave={() => resetCursor(1)}
           >
             Hi
             <span 
@@ -39,23 +36,23 @@ const Hero_section = () => {
 
           <span 
              
-              onMouseEnter={() => handleEnter(2)}
-              onMouseLeave={handleLeave}  
+              onMouseEnter={() => scaleCursor(2)} 
+              onMouseLeave={() => resetCursor(1)}
           >  
             My Name is
           </span>
 
           <span 
               className='uppercase text-[#EC5938] ' 
-              onMouseEnter={() => handleEnter(2)}
-              onMouseLeave={handleLeave} 
+              onMouseEnter={() => scaleCursor(2)} 
+              onMouseLeave={() => resetCursor(1)}
           >
             Mohamed amine bahmane
           </span>
           <span 
               
-              onMouseEnter={() => handleEnter(2)}
-              onMouseLeave={handleLeave} 
+              onMouseEnter={() => scaleCursor(2)} 
+              onMouseLeave={() => resetCursor(1)}
           >
             Crafting 
             <TypeAnimation

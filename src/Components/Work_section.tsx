@@ -1,24 +1,31 @@
-
+import React, { useRef , useEffect } from 'react'
 import ECO from '../assets/Images/ECO.png'
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
 
 const Work_section = () => {
-    const cursor = document.getElementById('cursor') as HTMLElement;
-    const handleEnter = (s : number , z : number) => {
+    const cursorRef = useRef<HTMLElement | null>(null);
+    useEffect(() => {
+        cursorRef.current = document.getElementById('cursor');  }, []
         
-        cursor.style.zIndex = `${z}`; // Ensure the cursor is above other elements
-        gsap.to('#cursor', { scale: s, duration: 0.5 })
+    );
+       
+    const handleEnter = (s : number , z : number) => {
+        if (cursorRef.current) {
+            cursorRef.current.style.zIndex = `${z}`; // Ensure the cursor is above other elements
+            gsap.to(cursorRef.current, { scale: s, duration: 0.5 })
+        }
       }
+      
     const handleLeave = (z : number) => {
-        cursor.style.zIndex = `${z}`;
-        gsap.to('#cursor', { scale: 1, duration: 0.5 })
+        if (cursorRef.current) {
+            cursorRef.current.style.zIndex = `${z}`;
+            gsap.to(cursorRef.current, { scale: 1, duration: 0.5 })
+        }
       }
 
   return (
-    <div id='Work_section' className='w-[70%] h-[100vh] max-lg:h[60vh] flex flex-col justify-center items-center mt-[90px] m-auto  max-lg:h-[50%] max-md:h-[30%] max-lg:w-[80%] max-md:w-full  max-lg:mt-[10px]'>
+    <div id='Work_section' className='w-[70%] h-[100vh] max-lg:h-[60vh] flex flex-col justify-center items-center mt-[90px] m-auto  max-lg:h-[50%] max-md:h-[30%] max-lg:w-[80%] max-md:w-full  max-lg:mt-[10px]'>
 
         <div className='font-Quick text-clamp-titles mb-[40px] mt-[60px]'>
             <h1 onMouseEnter={() => handleEnter(3 , -10)} onMouseLeave={() => handleLeave(-10)}>Works</h1>
