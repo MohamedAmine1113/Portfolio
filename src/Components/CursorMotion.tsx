@@ -2,7 +2,7 @@ import React, {   useRef , createContext , useContext , useEffect } from 'react'
 import { gsap } from 'gsap';
 
 
-export const CursorMotion = createContext<{ scaleCursor: (s: number) => void, resetCursor: (s: number) => void  , setZIndex: (z: number) => void , /* colorDefference : (type : string) => void */} | null>(null);
+export const CursorMotion = createContext<{ scaleCursor: (s: number) => void, resetCursor: (s: number) => void  , setZIndex: (z: number) => void  /* colorDefference : (type : string) => void */} | null>(null);
 export const useCursor = () => useContext(CursorMotion);
 
 
@@ -18,7 +18,7 @@ export const CursorProvider = ({ children }: { children: React.ReactNode }) => {
                 y: e.clientY - 30 / 2 ,
                 delay: 0,
                 ease: 'power4.out',
-                backgroundColor: 'transparent',
+                backgroundColor: '#EC5938',
                 
             })
         }
@@ -55,9 +55,9 @@ export const CursorProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
 
-    <CursorMotion.Provider value={{ scaleCursor, resetCursor , setZIndex ,/* colorDefference */ }}>
+    <CursorMotion.Provider value={{ scaleCursor, resetCursor , setZIndex /* colorDefference */ }}>
 
-         <div ref={cursorRef} id="cursor" className="fixed top-0 left-0 h-[30px] w-[30px] rounded-full pointer-events-none -z-10 bg-transparent" />
+         <div ref={cursorRef} id="cursor" className="fixed top-0 left-0 h-[30px] w-[30px] rounded-full pointer-events-none -z-10 " />
          {children}
 
     </CursorMotion.Provider>
