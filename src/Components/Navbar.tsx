@@ -26,7 +26,7 @@ const Navbar  = () => {
      
       
       <nav className='w-[100%] h-[18vh]'>
-        <div className='fixed top-[30px] left-[30px] z-100'>
+        <div className='fixed top-[30px] left-[20px] z-100'>
           <a
               href="Home"
               className={`font-Quick before:content-["{"] after:content-["}"] text-[30px] cursor-pointer `}
@@ -37,11 +37,11 @@ const Navbar  = () => {
           </a>
         </div>
 
-        <div className={`h-[45px] w-[500px] text-[14px] flex justify-center items-center font-medium rounded-[15px] rounded-r-none fixed top-[30px] -right-[160px] max-md:-right-[180px] z-100 text-[#F5EAE4] uppercase`} >
-              <ul className='flex flex-col  hover:'>
+        <div className={`h-[45px] w-fit text-[13px] flex justify-center items-center font-medium rounded-[15px] rounded-r-none fixed top-[30px] right-[40px] max-md:right-[20px] z-100 text-[#F5EAE4]  uppercase text-right`} onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} >
+              <ul className='flex flex-col'>
                 <li>
                   <FlipLink
-                    className='hover:text-[black] active:text-[black]'
+                    className='opacity-[100%]'
                     href="#About-section"
                   >
                     About 
@@ -82,17 +82,13 @@ interface FlipLinkProps {
   className?: string;
 }
 const FlipLink = ({ children, href, className }: FlipLinkProps) => {
-  const cursor = useCursor();
-      const scaleCursor = cursor!.scaleCursor;
-      const resetCursor = cursor!.resetCursor;
   return (
     <motion.a
       initial="initial"
       whileHover="hovered"
       href={href}
-      onMouseEnter={() => scaleCursor(1.5)} 
-      onMouseLeave={() => resetCursor(1)}
-      className={`font-normal relative block overflow-hidden whitespace-nowrap uppercase m-[5px] transition duration-700 ease-in-out${className ? ` ${className}` : ''}`}
+      
+      className={`font-normal relative block overflow-hidden whitespace-nowrap uppercase m-[5px] transition duration-700 ease-in-out  ${className ? ` ${className}` : ''}`}
       style={{
         lineHeight: 0.75,
       }}
@@ -115,7 +111,7 @@ const FlipLink = ({ children, href, className }: FlipLinkProps) => {
               ease: "easeInOut",
               delay: STAGGER * i,
             }}
-            className="inline-block"
+            className="inline-block opacity-[60%]"
             key={i}
           >
             {l}
@@ -138,7 +134,7 @@ const FlipLink = ({ children, href, className }: FlipLinkProps) => {
               ease: "easeInOut",
               delay: STAGGER * i,
             }}
-            className="inline-block"
+            className="inline-block opacity-[100%] front-bold"
             
             key={i}
           >
