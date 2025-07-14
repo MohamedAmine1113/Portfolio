@@ -1,5 +1,6 @@
 import React from 'react'
-import foto from '../assets/Images/fotos.jfif'
+
+import fotopr from '../assets/Images/fotopr.png';
 import { useCursor } from './CursorMotion';
 
 const About = () => {
@@ -13,7 +14,7 @@ const About = () => {
         
         
         <div className='w-[40%] h-[80%] flex justify-center max-md:w-[90%] max-lg:w-[80%]  ' >
-                <img src={foto} alt="foto" className='w-[400px] h-[600px] max-md:h-[500px] max-md:w-[400px]' />
+                <img src={fotopr} alt="foto" className='w-[400px] h-[600px] max-md:h-[500px] max-md:w-[400px]' />
         </div>
 
         

@@ -11,12 +11,14 @@ import { CursorProvider } from './Components/CursorMotion'
 
 
 
+
 const App = () => {
   
   return (
     <div id="Home" >
       <CursorProvider>
         <Navbar  />
+        
         <Hero />
         <About />
         <Skills />
