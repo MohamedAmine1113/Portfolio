@@ -49,14 +49,15 @@ const Hero_section = () => {
             My Name is
           </span>
 
-          <span 
+          <a 
               
-              className=' uppercase text-[#EC5938] w-fit hover:text-[#0D0D0D] hover:bg-[#EC5938] transition duration-1000 ease-in-out p-[5px] rounded-[4px] cursor-default'
+              className=' uppercase text-[#EC5938] w-fit transition duration-1000 ease-in-out p-[5px] rounded-[4px] cursor-pointer'
               onMouseEnter={() => {scaleCursor(0)}} 
               onMouseLeave={() => {resetCursor(1)}}
+              href='#About-section'
           > 
               Mohamed amine bahmane 
-          </span>
+          </a>
           <span 
               className='w-fit'
               onMouseEnter={() => scaleCursor(2)} 

@@ -18,20 +18,19 @@ const Contact_section = () => {
               <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Let's get in <br className='max-md:hidden max-lg:hidden' /> touch</h1>
             </div>
 
-            <div className='flex flex-row ' >
-              <div className='mr-[20px] text-center'>
-                <FlipLink href="https://instagram.com" > Instagram </FlipLink>
-                <FlipLink href="https://instagram.com" >Instagram</FlipLink>
-              </div>
-              <div>
-                <FlipLink href="https://instagram.com" >Instagram</FlipLink>
-                <FlipLink href="https://instagram.com" >Instagram</FlipLink>
-              </div>
-               
-               
-               
-                
+            <div className='mb-[20px] font-[500] max-md:text-center max-lg:text-center'>
+              <p >Email :</p>
+              <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>mohamed.amine.bahmane@gmail.com</a>
             </div>
+
+            <div className='w-fit'>
+              <p>Phone :</p>
+              <p onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>+212 649344406</p>
+            </div>
+        </div>
+        <div>
+
+          
 
         </div>
 
@@ -40,8 +39,20 @@ const Contact_section = () => {
               <span onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)}>My name is <input type="text" placeholder='YOUR FULL NAME' className=' max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)}/> and I <input type="text" placeholder='WEBSITE, FULL-TIME JOB, ETC' className='w-[75%] max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)}/> have a that needs help.<br /> Let’s work together – reach out at <input type="text" placeholder='YOUR EMAIL ADRESS' className='w-[70%] max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)}/> to get started!</span>
               <button className='text-[16px] font-medium float-left cursor-pointer flex flex-row justify-center items-center' onMouseEnter={() => scaleCursor(2)} onMouseLeave={() => resetCursor(1)}><i className='bx bx-arrow-back mr-[10px]'></i>SEND INFO</button>
           </form>
+
+          
           
         </div>
+        <div className='flex flex-row justify-center align-items-center gap-[30px] mt-[50px]' onMouseEnter={() => scaleCursor(0)} 
+              onMouseLeave={() => resetCursor(1)} >
+              
+                
+                <FlipLink href="https://instagram.com" >Github</FlipLink>
+                <FlipLink href="https://instagram.com" >Instagram</FlipLink>
+                <FlipLink href="https://instagram.com" >Linkdin</FlipLink>
+                <FlipLink href="https://instagram.com" >Facbook</FlipLink>
+              
+          </div>
     </div>
   )
 }
@@ -64,15 +75,16 @@ const FlipLink = ({ children, href, className }: FlipLinkProps) => {
       whileHover="hovered"
       href={href}
       
-      className={` text-[25px] font-normal relative block overflow-hidden whitespace-nowrap  mb-[10px] transition duration-700 ease-in-out  ${className ? ` ${className}` : ''}`}
+      className={` text-[25px] font-[500] w-[150px] h-[35px] relative block overflow-hidden whitespace-nowrap  mb-[25px] mr-[35px] hover:bg-[#EC5938] hover:text-[#0D0D0D] text-center rounded-[6px] ${className ? ` ${className}` : ''}`}
       style={{
-        lineHeight: 0.75,
+        lineHeight: 1.3,
       }}
     
 
     >
-      <div>
-        
+     
+      <div >
+         
         {children.split("").map((l, i) => (
           <motion.span
             variants={{
@@ -88,7 +100,7 @@ const FlipLink = ({ children, href, className }: FlipLinkProps) => {
               ease: "easeInOut",
               delay: STAGGER * i,
             }}
-            className="inline-block opacity-[60%]"
+            className="inline-block "
             key={i}
           >
             {l} 
@@ -98,6 +110,7 @@ const FlipLink = ({ children, href, className }: FlipLinkProps) => {
         
       </div>
       <div className="absolute inset-0">
+        
         {children.split("").map((l, i) => (
           <motion.span
             variants={{
@@ -113,7 +126,7 @@ const FlipLink = ({ children, href, className }: FlipLinkProps) => {
               ease: "easeInOut",
               delay: STAGGER * i,
             }}
-            className="inline-block opacity-[100%] front-bold"
+            className="inline-block "
             
             key={i}
           >
