@@ -2,7 +2,7 @@ import React from 'react'
 
 import fotopr from '../assets/Images/fotopr.png';
 import { useCursor } from './CursorMotion';
-
+import amineCV from '../assets/pdf/amineCV.pdf';
 const About = () => {
 
     const cursor = useCursor();
@@ -33,7 +33,7 @@ const About = () => {
                 <div className='bg-[#EC5938] text-[25px] flex items-center justify-center w-[30px] h-[30px] rounded-full'>
                     {<i className='bxr  bx-arrow-up-right-stroke '  ></i> }
                 </div>
-                <a href=""> Download CV </a>
+                <a href={amineCV} download={amineCV}> Download CV </a>
             </div>  
         </div>
     </div>
