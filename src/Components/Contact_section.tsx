@@ -14,7 +14,7 @@ const Contact_section = () => {
 
           <div className='w-[40%] max-md:w-full max-md:text-center max-md:border-b max-md:p-[30px] p-[10px] max-lg:w-full max-lg:text-center max-lg:border-b max-lg:p-[30px]'>
 
-            <div className='font-Quick text-clamp-titles mb-[30px] text-[35px] max-md:text-center max-lg:text-center w-fit'>
+            <div className='font-Quick text-clamp-titles mb-[20px] text-[35px] max-md:text-center max-lg:text-center w-fit'>
               <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Let's get in <br className='max-md:hidden max-lg:hidden' /> touch</h1>
             </div>
 
@@ -23,10 +23,24 @@ const Contact_section = () => {
               <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>mohamed.amine.bahmane@gmail.com</a>
             </div>
 
-            <div className='w-fit'>
+
+            <div className='flex flex-row gap-[50px]'>
+               <div className='w-fit mb-[20px]'>
               <p>Phone :</p>
-              <p onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>+212 649344406</p>
+              <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>+212 649344406</a>
             </div>
+            <div className='w-fit'>
+              <p>Social :</p>
+              <div className='flex flex-row gap-[15px]'>
+                 <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>Github</a>
+                <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>Instagram</a>
+                <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>Linkdin</a>
+                <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>Facbook</a>
+              </div>
+             
+            </div>
+            </div>
+           
         </div>
         <div>
 
@@ -43,7 +57,7 @@ const Contact_section = () => {
           
           
         </div>
-        <div className='flex flex-row justify-center align-items-center gap-[30px] mt-[50px]' onMouseEnter={() => scaleCursor(0)} 
+        {/* <div className='flex flex-row justify-center align-items-center gap-[30px] mt-[50px]' onMouseEnter={() => scaleCursor(0)} 
               onMouseLeave={() => resetCursor(1)} >
               
                 
@@ -52,7 +66,7 @@ const Contact_section = () => {
                 <FlipLink href="https://instagram.com" >Linkdin</FlipLink>
                 <FlipLink href="https://instagram.com" >Facbook</FlipLink>
               
-          </div>
+          </div> */}
     </div>
   )
 }
