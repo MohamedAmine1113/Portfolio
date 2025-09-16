@@ -30,6 +30,7 @@ const About = () => {
             </div>
 
             <div className='max-md:text-[13px]   flex items-center justify-center gap-2 cursor-pointer mt-[50px] font-normal'  onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)}>
+                
                 <div className='bg-[#EC5938] text-[25px] flex items-center justify-center w-[30px] h-[30px] rounded-full'>
                     {<i className='bxr  bx-arrow-up-right-stroke '  ></i> }
                 </div>

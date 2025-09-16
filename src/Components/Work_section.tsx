@@ -29,26 +29,73 @@ const Work_section = () => {
             <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Works</h1>
         </div>
 
-        <div className='bg-[#F5EAE4] text-[#0D0D0D] w-[80%] h-[75vh] max-md:h-[30vh] max-lg:h-[30vh] rounded-[15px] flex justify-center items-center flex-col gap-[10px] max-lg:gap-[5px] mb-[100px] cursor-pointer' onMouseEnter={() => {scaleCursor(4); setIndex(10)}} onMouseLeave={() => {resetCursor(1); setIndex(-10)}}>
-            <div className='w-[95%] h-[73%] mt-[10px] max-md:mt-[10px] max-lg:mt-[10px] '>
-                <img src={ECO} alt="lkjih" className='rounded-[15px]' />
-            </div>
-
-            <div className='w-[90%] h-[80px] flex justify-between items-center flex-row'>
-                <div>
-                    <h1 className='font-bold max-md:text-[13px] '>ECOMMERCE WEBSITE</h1>
-                    <p className='text-[10px] '>Front-End Developpement</p>
+        <div className=' w-full h-[25vh] max-md:h-[30vh] max-lg:h-[30vh] rounded-[10px] flex justify-between items-center flex-row gap-[10px] max-lg:gap-[5px] mb-[100px] border-b pl-[5px] pr-[5px]'  onMouseEnter={() => {scaleCursor(0); setIndex(1)}} onMouseLeave={() => {resetCursor(1); setIndex(0)}}>
+        
+                <div className='w-[25%]'>
+                    <h1 className='font-bold text-[25px] max-md:text-[13px] '>ECOMMERCE WEBSITE</h1>
+                    <p className='text-[10px] text-[#EC5938] '>Front-End Developpement</p>
+                    <div className='text-[20px] flex items-center justify-start gap-3 mt-[10px]A'>
+                        <i className='bx bxl-html5 text-[#ef6628] hover:drop-shadow-[0_0_30px_#ef6628] transition-all duration-200' ></i> 
+                        <i className='bx bxl-css3 text-[#016bc1] hover:drop-shadow-[0_0_30px_#016bc1] transition-all duration-200' ></i> 
+                        <i className='bx bxl-javascript text-[#ffdf00] hover:drop-shadow-[0_0_30px_#ffdf00] transition-all duration-200' ></i>
+                    </div>
+                    
                 </div>
 
-                <div className='max-md:w-[90px] max-md:h-[90px] flex items-center justify-center text-[30px] max-md:text-[25px] ml-[30px] max-md:ml-[10px] cursor-pointer '>
-                    <i className='bx bxl-html5 text-[#ef6628] hover:drop-shadow-[0_0_30px_#ef6628] transition-all duration-200' ></i> 
-                    <i className='bx bxl-css3 text-[#016bc1] hover:drop-shadow-[0_0_30px_#016bc1] transition-all duration-200' ></i> 
-                    <i className='bx bxl-javascript text-[#ffdf00] hover:drop-shadow-[0_0_30px_#ffdf00] transition-all duration-200' ></i>
+                {  <div className='w-[25%]  '>
+                    <img src={ECO} alt="lkjih" className='rounded-[15px]' />
+                </div> }
+
+                <div className='w-[25%] flex items-center justify-end '>
+                    
+                    <button className='text-[16px]  cursor-pointer'>View Project</button>
+                    <div className=' text-[23px] flex items-center justify-center'>
+                        {<i className='bxr  bx-arrow-up-right-stroke '  ></i> }
+                    </div>
+                    
+                    
                 </div>              
             </div>
-        </div>
+
+
+
+
+            <div className=' w-full h-[25vh] max-md:h-[30vh] max-lg:h-[30vh] rounded-[10px] flex justify-between items-center flex-row gap-[10px] max-lg:gap-[5px] mb-[100px] border-b pl-[5px] pr-[5px]'  onMouseEnter={() => {scaleCursor(0); setIndex(1)}} onMouseLeave={() => {resetCursor(1); setIndex(0)}}>
+        
+                <div className='w-[25%]'>
+                    <h1 className='font-bold text-[25px] max-md:text-[13px] '>ECOMMERCE WEBSITE</h1>
+                    <p className='text-[10px] text-[#EC5938] '>Front-End Developpement</p>
+                    <div className='text-[20px] flex items-center justify-start gap-3 mt-[10px]A'>
+                        <i className='bx bxl-html5 text-[#ef6628] hover:drop-shadow-[0_0_30px_#ef6628] transition-all duration-200' ></i> 
+                        <i className='bx bxl-css3 text-[#016bc1] hover:drop-shadow-[0_0_30px_#016bc1] transition-all duration-200' ></i> 
+                        <i className='bx bxl-javascript text-[#ffdf00] hover:drop-shadow-[0_0_30px_#ffdf00] transition-all duration-200' ></i>
+                    </div>
+                    
+                </div>
+
+                {  <div className='w-[25%]  '>
+                    <img src={ECO} alt="lkjih" className='rounded-[15px]' />
+                </div> }
+
+                <div className='w-[25%] flex items-center justify-end '>
+                    
+                    <button className='text-[16px]  cursor-pointer'>View Project</button>
+                    <div className=' text-[23px] flex items-center justify-center'>
+                        {<i className='bxr  bx-arrow-up-right-stroke '  ></i> }
+                    </div>
+                    
+                    
+                </div>              
+            </div>
+       
 
     </div>
+
+
+
+        
+
+    
   )
 }
 
