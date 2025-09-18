@@ -57,7 +57,7 @@ export const CursorProvider = ({ children }: { children: React.ReactNode }) => {
 
     <CursorMotion.Provider value={{ scaleCursor, resetCursor , setZIndex /* colorDefference */ }}>
 
-         <div ref={cursorRef} id="cursor" className="fixed top-0 left-0 h-[30px] w-[30px] rounded-full pointer-events-none -z-10 " />
+         <div ref={cursorRef} id="cursor" className="fixed top-0 left-0 h-[30px] w-[30px] rounded-full pointer-events-none -z-100 " />
          {children}
 
     </CursorMotion.Provider>

@@ -16,7 +16,7 @@ const App = () => {
   
   return (
     <div id="Home" >
-      <CursorProvider>
+      <CursorProvider >
         <Navbar  />
         
         <Hero />

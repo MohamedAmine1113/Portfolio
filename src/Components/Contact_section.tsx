@@ -1,6 +1,6 @@
 import React from 'react'
 import { useCursor } from './CursorMotion';
-import {motion} from 'framer-motion';
+/* import {motion} from 'framer-motion'; */
 
 const Contact_section = () => {
 
@@ -74,7 +74,7 @@ const Contact_section = () => {
 export default Contact_section
 
 
-const DURATION = 0.25;
+/* const DURATION = 0.25;
 const STAGGER = 0.025;
 
 interface FlipLinkProps {
@@ -150,4 +150,4 @@ const FlipLink = ({ children, href, className }: FlipLinkProps) => {
       </div>
     </motion.a>
   );
-};
+}; */

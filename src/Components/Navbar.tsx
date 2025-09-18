@@ -26,7 +26,7 @@ const Navbar  = () => {
      
       
       <nav className='w-[100%] h-[18vh]'>
-        <div className='fixed top-[30px] left-[20px] z-100'>
+        <div className='fixed top-[30px] left-[20px]'>
           <a
               href="Home"
               className={`font-Quick before:content-["{"] after:content-["}"] text-[30px] cursor-pointer `}
