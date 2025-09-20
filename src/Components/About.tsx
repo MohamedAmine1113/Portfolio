@@ -10,7 +10,7 @@ const About = () => {
     const resetCursor = cursor!.resetCursor;
 
   return (
-    <div id='About-section' className=' max-w-[90%] min-h-[100vh] mt-[200px] flex justify-center items-start flex-row gap-[10px] m-auto max-md:flex-col max-md:w-full max-md:mt-[120px] max-lg:flex-col max-lg:w-full max-lg:mt-[100px] '>
+    <div id='About-section' className=' max-w-[80%] min-h-[100vh]  flex justify-center items-center flex-row gap-[10px] m-auto max-md:flex-col max-md:w-full max-md:mt-[120px] max-lg:flex-col max-lg:w-full max-lg:mt-[100px] '>
         
         
         <div className='w-[30%] h-[80%] flex justify-center max-md:w-[90%] max-lg:w-[80%]  ' >

@@ -9,8 +9,8 @@ const Contact_section = () => {
     const resetCursor = cursor!.resetCursor;
 
   return (
-    <div id='Contact-section' className='w-[90%] h-[100vh] max-lg:h-[60vh] mt-[90px] flex flex-col justify-center items-center m-auto max-md:mt-[200px] '>
-        <div className='flex flex-row justify-center items-center max-md:flex-col max-md:gap-[20px] max-lg:flex-col'>
+    <div id='Contact-section' className='max-w-[90%] h-[100vh]  max-lg:h-[60vh] flex flex-col justify-center items-center m-auto max-md:mt-[200px] '>
+        <div className='w-full flex flex-row justify-center items-center max-md:flex-col max-md:gap-[20px] max-lg:flex-col'>
 
           <div className='w-[40%] max-md:w-full max-md:text-center max-md:border-b max-md:p-[30px] p-[10px] max-lg:w-full max-lg:text-center max-lg:border-b max-lg:p-[30px]'>
 

@@ -21,17 +21,17 @@ const Work_section = () => {
     const cursor = useCursor();
     const scaleCursor = cursor!.scaleCursor;
     const resetCursor = cursor!.resetCursor;
-    const setIndex = cursor!.setZIndex
+    /* const setIndex = cursor!.setZIndex */
 
   return (
-    <div id='Work_section' className='w-[90%] h-[150vh] max-lg:h-[60vh] flex flex-col justify-center items-center mt-[90px] m-auto  max-lg:h-[50%] max-md:h-[30%] max-lg:w-[80%] max-md:w-full  max-lg:mt-[10px] z-1'>
+    <div id='Work_section' className='max-w-[80%] h-[125vh]  m-auto  max-lg:h-[60vh] flex flex-col justify-start items-center max-lg:h-[50%] max-md:h-[30%] max-lg:w-[80%] max-md:w-full  max-lg:mt-[10px] z-1'>
 
-        <div className='font-Quick text-clamp-titles mb-[80px] mt-[60px] '>
+        <div className='font-Quick text-clamp-titles mb-[80px] '>
             <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Works</h1>
         </div>
 
         
-        <div className=' w-[90%] h-[30vh] max-md:h-[30vh] max-lg:h-[30vh] max-lg:gap-[5px] mb-[100px] '  onMouseEnter={() => {scaleCursor(0); setIndex(1)}} onMouseLeave={() => {resetCursor(1); setIndex(0)}}>
+        <div className=' w-full h-[30vh] max-md:h-[30vh] max-lg:h-[30vh] max-lg:gap-[5px] mb-[100px] ' >
             
             <div className='w-full m-auto grid grid-cols-2 gap-4 '>
 
