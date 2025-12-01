@@ -24,8 +24,8 @@ const Contact_section = () => {
             </div>
 
 
-            <div className='flex flex-row gap-[50px]'>
-               <div className='w-fit mb-[20px]'>
+            <div className='flex flex-row gap-[50px] max-lg:gap-[20px] max-lg:flex max-lg;flex-col'>
+               <div className='w-fit '>
               <p>Phone :</p>
               <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>+212 649344406</a>
             </div>

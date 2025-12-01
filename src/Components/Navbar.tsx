@@ -25,7 +25,7 @@ const Navbar  = () => {
     return (
      
       
-      <nav className='w-[100%] h-[18vh]'>
+      <nav className='w-[100%] z-100'>
         <div className='fixed top-[30px] left-[20px]'>
           <a
               href="Home"
@@ -37,7 +37,7 @@ const Navbar  = () => {
           </a>
         </div>
 
-        <div className={`h-[45px] w-fit text-[13px] flex justify-center items-center font-medium rounded-[15px] rounded-r-none fixed top-[30px] right-[40px] max-md:right-[20px] z-100 text-[#F5EAE4]  uppercase text-right`} onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} >
+        <div className={` h-[45px] w-fit text-[13px] flex justify-center items-center font-medium rounded-[15px] rounded-r-none fixed top-[30px] right-[40px] max-md:right-[20px] text-[#F5EAE4]  uppercase text-right`} onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} >
               <ul className='flex flex-col'>
                 <li>
                   <FlipLink

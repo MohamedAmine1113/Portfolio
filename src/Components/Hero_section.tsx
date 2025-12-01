@@ -17,16 +17,16 @@ const Hero_section = () => {
    
 
   return (
-    <div>
-      <div className='h-[65vh]  pt-[30px] font-Quick'>
+    <div className='h-[100vh] font-Quick flex flex-col' >
+      <div>
         
-      <Marquee direction="right" speed={80} className="-mt-[60px] max-md:-mt-[30px]"  >
-        <span className="w-full h-[15vh] text-clamp2 max-md:pl-[100px] uppercase text-outline" onMouseEnter={() => scaleCursor(8)} onMouseLeave={() => resetCursor(1)} >
+      <Marquee direction="right" speed={80} className="w-full h-fit"  >
+        <span className="  text-clamp2 uppercase text-outline" onMouseEnter={() => scaleCursor(8)} onMouseLeave={() => resetCursor(1)} >
           Web Designer&nbsp;& Frontend Developer &&nbsp;
         </span>
       </Marquee>
 
-        <div className=' h-[40vh] md:pl-[40px] max-md:pl-[10px] max-md:text-[25px] pb-[10px] flex justify-end flex-col text-[30px] font-[200] '>
+        <div className='h-[35vh] pb-[10px] px-4 sm:px-6 lg:px-8 flex justify-end flex-col text-[25px] sm:text-[30px] sm:text-[35px] font-[200] transition-all duration-300'>
           <span 
             className='w-fit'
             onMouseEnter={() => scaleCursor(2)} 
@@ -81,7 +81,7 @@ const Hero_section = () => {
       </div>
     
        
-       <div className='flex justify-center gap-[30px] text-[20px] cursor-pointer mt-[60px] w-fit m-auto' >
+       <div className='flex justify-center gap-[30px] text-[20px] cursor-pointer m-auto' >
         <GsapMagic >
             <svg  xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#F5EAE4" viewBox="0 0 24 24"  onMouseEnter={() => scaleCursor(1.5)} onMouseLeave={() => resetCursor(1)}>
               <path fill-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336 9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2" clip-rule="evenodd"></path>
