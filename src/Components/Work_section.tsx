@@ -24,21 +24,30 @@ const Work_section = () => {
     /* const setIndex = cursor!.setZIndex */
 
   return (
-    <div id='Work_section' className='max-w-[80%] h-[100vh]  m-auto  max-lg:h-[60vh] flex flex-col justify-start items-center max-lg:h-[50%] max-md:h-[30%] max-lg:w-[80%] max-md:w-full  max-lg:mt-[10px] z-1'>
+    <div id='Work_section' className='w-[80%] h-[100vh]  m-auto  max-lg:h-[60vh] flex flex-col justify-start items-center max-lg:h-[50%] max-md:h-[30%] max-lg:w-[80%] max-md:w-full  max-lg:mt-[10px] z-1'>
 
         <div className='font-Quick text-clamp-titles mb-[80px] '>
             <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Works</h1>
         </div>
 
         
-        <div className=' w-full h-[30vh] max-md:h-[30vh] max-lg:h-[30vh] max-lg:gap-[5px] mb-[100px] ' >
-            
-            <div className='w-full m-auto grid grid-cols-1 gap-4 '>
+        <div className='flex flex-col justify-start items-center gap-12 w-full h-[30vh] max-md:h-[30vh] max-lg:h-[30vh] max-lg:gap-[5px] mb-[100px] ' >
 
-                <div className=' w-full h-[12vh] p-[10px] bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-[20px] rounded-[15px] flex flex-col justify-start items-start gap-5'>
+
+
+            <a href="" className='flex justify-between opacity-[20%] hover:opacity-[100%] cursor-pointer transition duration-700 ease-in-out'><p>Ecommerce Website</p><span className='border-[1px] opacity-[20%] h-0 w-150 m-auto mx-2'></span><p>Frontend, 2024</p></a>
+            <a href="" className='flex justify-between opacity-[20%] hover:opacity-[100%] cursor-pointer transition duration-700 ease-in-out'><p>Ecommerce Website</p><span className='border-[1px] opacity-[20%] h-0 w-150 m-auto mx-2'></span><p>Frontend, 2024</p></a>
+            <a href="" className='flex justify-between opacity-[20%] hover:opacity-[100%] cursor-pointer transition duration-700 ease-in-out'><p>Ecommerce Website</p><span className='border-[1px] opacity-[20%] h-0 w-150 m-auto mx-2'></span><p>Frontend, 2024</p></a>
+            <a href="" className='flex justify-between opacity-[20%] hover:opacity-[100%] cursor-pointer transition duration-700 ease-in-out'><p>Ecommerce Website</p><span className='border-[1px] opacity-[20%] h-0 w-150 m-auto mx-2'></span><p>Frontend, 2024</p></a>
+            
+            {/* <div className='w-full m-auto grid grid-cols-1 gap-4 '>
+
+                
+
+                {/* <div className=' w-full h-[12vh] p-[10px] bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-[20px] rounded-[15px] flex flex-col justify-start items-start gap-5'>
                     {/* <div>
                         <img src={ECO} alt="lkjih" className='rounded-[15px]  m-auto ' />
-                    </div> */}
+                    </div> 
                     <div className='w-full flex flex-row justify-between items-center px-[10px] '>
                         <div>
                             <h1 className='font-bold text-[25px] max-md:text-[13px] '>ECOMMERCE WEBSITE</h1>
@@ -58,13 +67,13 @@ const Work_section = () => {
                         
                     </div>
                     
-                </div>
+                </div> */}
 
 
-               <div className=' w-full h-[12vh] p-[10px] bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-[20px] rounded-[15px] flex flex-col justify-start items-start gap-5'>
+               {/* <div className=' w-full h-[12vh] p-[10px] bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-[20px] rounded-[15px] flex flex-col justify-start items-start gap-5'>
                     {/* <div>
                         <img src={ECO} alt="lkjih" className='rounded-[15px]  m-auto ' />
-                    </div> */}
+                    </div> 
                     <div className='w-full flex flex-row justify-between items-center px-[10px] '>
                         <div>
                             <h1 className='font-bold text-[25px] max-md:text-[13px] uppercase'>app-desktop managment livraison</h1>
@@ -87,10 +96,10 @@ const Work_section = () => {
                 </div>
 
                 <div className=' w-full h-[12vh] bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-[20px] rounded-[15px]'></div>
-                <div className=' w-full h-[12vh] bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-[20px] rounded-[15px]'></div>
+                <div className=' w-full h-[12vh] bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-[20px] rounded-[15px]'></div> 
                 
              
-            </div>
+            </div> */}
 
 
 
