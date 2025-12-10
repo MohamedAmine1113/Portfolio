@@ -15,7 +15,7 @@ import { CursorProvider } from './Components/CursorMotion'
 const App = () => {
   
   return (
-    <div id="Home" className='flex flex-col gap-[100px]' >
+    <div id="Home" className='flex flex-col ' >
       <CursorProvider >
         <Navbar  />
         

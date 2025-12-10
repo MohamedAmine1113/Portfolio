@@ -17,7 +17,7 @@ const Hero_section = () => {
    
 
   return (
-    <div className='h-[100vh] font-Quick flex flex-col' >
+    <div className='h-[100vh] font-Quick flex flex-col mt-[100px]' >
       <div>
         
       <Marquee direction="right" speed={80} className="w-full h-fit"  >

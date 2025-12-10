@@ -31,12 +31,12 @@ const Work_section = () => {
         </div>
 
         
-        <div className='flex flex-col justify-start items-center gap-12 w-full h-[30vh] max-md:h-[30vh] max-lg:h-[30vh] max-lg:gap-[5px] mb-[100px] ' >
+        <div className='flex flex-col justify-start items-center gap-12 w-full h-[30vh] max-md:h-[30vh] max-lg:h-[30vh] max-lg:gap-[5px] mb-[100px]' >
 
 
 
-            <a href="" className='flex justify-between opacity-[20%] hover:opacity-[100%] cursor-pointer transition duration-700 ease-in-out'><p>Ecommerce Website</p><span className='border-[1px] opacity-[20%] h-0 w-150 m-auto mx-2'></span><p>Frontend, 2024</p></a>
-            <a href="" className='flex justify-between opacity-[20%] hover:opacity-[100%] cursor-pointer transition duration-700 ease-in-out'><p>Ecommerce Website</p><span className='border-[1px] opacity-[20%] h-0 w-150 m-auto mx-2'></span><p>Frontend, 2024</p></a>
+            <a href="" className='flex justify-between opacity-[20%] hover:opacity-[100%] cursor-pointer transition duration-700 ease-in-out'><p>Ecommerce Website</p><span className='border-[1px] opacity-[20%] h-0 w-150 m-auto mx-2'></span><p>HTML CSS JS, 2024</p></a>
+            <a href="" className='flex justify-between opacity-[20%] hover:opacity-[100%] cursor-pointer transition duration-700 ease-in-out'><p>Apps Managment</p><span className='border-[1px] opacity-[20%] h-0 w-150 m-auto mx-2'></span><p>Wendev, 2024</p></a>
             <a href="" className='flex justify-between opacity-[20%] hover:opacity-[100%] cursor-pointer transition duration-700 ease-in-out'><p>Ecommerce Website</p><span className='border-[1px] opacity-[20%] h-0 w-150 m-auto mx-2'></span><p>Frontend, 2024</p></a>
             <a href="" className='flex justify-between opacity-[20%] hover:opacity-[100%] cursor-pointer transition duration-700 ease-in-out'><p>Ecommerce Website</p><span className='border-[1px] opacity-[20%] h-0 w-150 m-auto mx-2'></span><p>Frontend, 2024</p></a>
             
