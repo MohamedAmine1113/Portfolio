@@ -17,7 +17,7 @@ const Hero_section = () => {
    
 
   return (
-    <div className='h-[100vh] font-Quick flex flex-col mt-[100px]' >
+    <div className='h-[100vh] font-Quick flex flex-col mt-[100px] w-full' >
       <div>
         
       <Marquee direction="right" speed={80} className="w-full h-fit"  >
@@ -26,7 +26,7 @@ const Hero_section = () => {
         </span>
       </Marquee>
 
-        <div className='h-[35vh] pb-[10px] px-4 sm:px-6 lg:px-8 flex justify-end flex-col text-[25px] sm:text-[30px] sm:text-[35px] font-[200] transition-all duration-300'>
+        <div className='h-[35vh] pb-[10px] px-4 sm:px-6 2xl:px-8 flex justify-end flex-col text-[25px] sm:text-[30px] sm:text-[35px] font-[200] transition-all duration-300'>
           <span 
             className='w-fit'
             onMouseEnter={() => scaleCursor(2)} 

@@ -15,7 +15,7 @@ import { CursorProvider } from './Components/CursorMotion'
 const App = () => {
   
   return (
-    <div id="Home" className='flex flex-col ' >
+    <div id="Home" className='flex flex-col Poppins' >
       <CursorProvider >
         <Navbar  />
         

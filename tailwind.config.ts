@@ -10,6 +10,14 @@ export default {
         },
       },
     },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1022px",
+      xl: "1280px",
+      "2xl": "1536px",
+      max: "1760px",
+    },
   },
   plugins: [],
 } satisfies Config

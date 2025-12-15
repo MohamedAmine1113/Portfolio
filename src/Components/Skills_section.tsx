@@ -11,7 +11,7 @@ const Skills_section = () => {
   const resetCursor = cursor!.resetCursor;
 
   return (
-    <div className='max-w-[80%] h-[50vh] mb-[25vh] max-md:h-[30vh] max-md:w-full max-lg:h-[30vh] flex justify-center items-center flex-col m-auto'>
+    <div className=' max-w-[80%] h-[50vh] mb-[25vh] max-md:h-[30vh] max-md:w-full max-lg:h-[30vh] flex justify-center items-center flex-col m-auto'>
         <h1 className='font-Quick text-clamp-titles mb-[20px]' onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)}>Skills</h1>
         <Marquee speed={100} pauseOnHover className='cursor-pointer' >
             <div className='h-[140px] w-[120px] max-md:w-[90px] max-md:h-[90px] flex items-center justify-center text-[60px] max-md:text-[40px] ml-[30px] max-md:ml-[10px] hover:text-[#197799] hover:drop-shadow-[0_0_26px_#197799] transition-all duration-200 ' 
