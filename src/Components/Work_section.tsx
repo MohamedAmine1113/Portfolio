@@ -3,14 +3,15 @@ import { useCursor } from './CursorMotion';
 import React, {useState} from 'react'
 
 import Eco from '../assets/Images/ECO.png';
-import zeb from '../assets/Images/foto.png';
+import gym from '../assets/Images/gym.png';
+import shop from '../assets/Images/shop.png';
 
 import "swiper/css";
 import {Swiper, SwiperSlide} from 'swiper/react';
 
 const projects = [
     {
-        num : '01.',
+        num : '01. ',
         title : 'Ecommerce Website',
         stack : [{name :'bx bxl-javascript text-[#ffdf00]'}, {name : 'bx bxl-html5 text-[#ef6628]'}, {name : 'bx bxl-css3 text-[#016bc1]'} ],
         image : Eco,
@@ -18,11 +19,20 @@ const projects = [
         
     },
     {
-        num : '02.',
+        num : '02. ',
         title : 'Ecommerce Website',
         stack : [{name :'bx bxl-javascript text-[#ffdf00]'}, {name : 'bx bxl-html5 text-[#ef6628]'}, {name : 'bx bxl-css3 text-[#016bc1]'} ],
-        image : zeb,
-        live :  'https://www.youtube.com/results?search_query=swiper+react+js'
+        image : gym,
+        live :  'https://gym566.netlify.app/'
+        
+    },
+    {
+        num : '03. ',
+        title : 'Ecommerce Website',
+        stack : [{name :'bx bxl-javascript text-[#ffdf00]'}, {name : 'bx bxl-html5 text-[#ef6628]'}, {name : 'bx bxl-css3 text-[#016bc1]'} ],
+        image : shop,
+        live :  'https://gym566.netlify.app/',
+        bgcolor : '#f3f3f3'
         
     }
 ]
@@ -67,7 +77,7 @@ const Work_section = () => {
 
         
 
-            <div className='w-[70%] h-[60%] bg-[#F5EAE4] m-auto rounded-[20px]' onMouseEnter={() => scaleCursor(1.5)} onMouseLeave={() => resetCursor(1)} >
+            <div className='w-[95%] h-[60%] md:w-[95%] md:h-[65%] lg:h-[45%] xl:w-[70%] xl:h-[63%] bg-[#F5EAE4] m-auto rounded-[20px]' onMouseEnter={() => scaleCursor(1.5)} onMouseLeave={() => resetCursor(1)} >
                 
                 <Swiper spaceBetween={50} slidesPerView={1} onSlideChange={handleSlideChange} >
                     {projects.map((project, index) => (
@@ -79,20 +89,20 @@ const Work_section = () => {
                     ))}
                 </Swiper>
 
-                <div className='h-[13%] flex justify-between items-center  mx-[45px] '>
+                <div className='h-[13%] flex justify-between items-center mx-[25px] md:mx-[45px] text-[15px] md:text-[16px] md:mt-[10px] xl:text-[20px]'>
                     <div className='flex-row justify-start it ms-center gap-[20px] '>
                         
-                        <p className='uppercase text-[20px] font-bold text-black'>{project.num} {project.title}</p>
+                        <p className='uppercase  font-bold text-black'>{project.num} {project.title}</p>
                         
                         <div>
                             {project.stack.map((tech, index) => (
-                                <i key={index} className={`${tech.name} text-[20px]`}></i>
+                                <i key={index} className={`${tech.name} `}></i>
                             ))}
                         </div>
 
                     </div>
-                    <div className='text-black'>
-                        <a href={project.live}  target="_blank" className='underline front-normal text-[14px]'>View Project</a>
+                    <div className='text-black '>
+                        <a href={project.live}  target="_blank" className='underline front-normal text-[12px] md:text-[14px]'>View Project</a>
                     </div>
                 </div>
             </div>
