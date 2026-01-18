@@ -9,22 +9,22 @@ const Contact_section = () => {
     const resetCursor = cursor!.resetCursor;
 
   return (
-    <div id='Contact-section' className='max-w-[90%] h-[100vh]  max-lg:h-[60vh] flex flex-col justify-center items-center m-auto max-md:mt-[200px] '>
-        <div className='w-full flex flex-row justify-center items-center max-md:flex-col max-md:gap-[20px] max-lg:flex-col'>
+    <div id='Contact-section' className='max-w-[90%] h-[100vh]  max-lg:h-[80vh] flex flex-col justify-center items-center m-auto max-md:mt-[200px] '>
+        <div className='w-full flex flex-row justify-center items-center max-md:flex-col max-md:gap-[20px] max-lg:flex-col '>
 
-          <div className='w-[40%] max-md:w-full max-md:text-center max-md:border-b max-md:p-[30px] p-[10px] max-lg:w-full max-lg:text-center max-lg:border-b max-lg:p-[30px]'>
+          <div className='w-[40%]  mx-auto max-md:w-full max-md:flex-col  max-md:border-b max-md:p-[30px] p-[10px] max-lg:w-full max-lg:text-center max-lg:border-b max-lg:p-[30px]'>
 
-            <div className='font-Quick text-clamp-titles mb-[20px] text-[35px] max-md:text-center max-lg:text-center w-fit'>
+            <div className='font-Quick text-clamp-titles mb-[20px] text-[35px] max-md:mx-auto max-lg:mx-auto w-fit'>
               <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Let's get in <br className='max-md:hidden max-lg:hidden' /> touch</h1>
             </div>
 
-            <div className='mb-[20px] font-[500] max-md:text-center max-lg:text-center'>
+            <div className='mb-[20px] font-[500]  max-lg:text-center'>
               <p >Email :</p>
               <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>mohamed.amine.bahmane@gmail.com</a>
             </div>
 
 
-            <div className='flex flex-row gap-[50px] max-lg:gap-[20px] max-lg:flex max-lg;flex-col'>
+            <div className='flex flex-row gap-[50px] max-lg:justify-center max-lg:gap-[80px] lg:flex max-lg;flex-col'>
                <div className='w-fit '>
               <p>Phone :</p>
               <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>+212 649344406</a>
@@ -35,7 +35,7 @@ const Contact_section = () => {
                  <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>Github</a>
                 <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>Instagram</a>
                 <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>Linkdin</a>
-                <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>Facbook</a>
+                {/* <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>Facbook</a> */}
               </div>
              
             </div>
@@ -57,16 +57,7 @@ const Contact_section = () => {
           
           
         </div>
-        {/* <div className='flex flex-row justify-center align-items-center gap-[30px] mt-[50px]' onMouseEnter={() => scaleCursor(0)} 
-              onMouseLeave={() => resetCursor(1)} >
-              
-                
-                <FlipLink href="https://instagram.com" >Github</FlipLink>
-                <FlipLink href="https://instagram.com" >Instagram</FlipLink>
-                <FlipLink href="https://instagram.com" >Linkdin</FlipLink>
-                <FlipLink href="https://instagram.com" >Facbook</FlipLink>
-              
-          </div> */}
+        
     </div>
   )
 }

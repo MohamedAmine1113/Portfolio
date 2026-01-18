@@ -5,6 +5,7 @@ import About from './Components/About'
 import Skills from './Components/Skills_section'
 import Work from './Components/Work_section'
 import Contact from './Components/Contact_section'
+import Footer from './Components/Footer'
 
 
 import { CursorProvider } from './Components/CursorMotion'
@@ -24,6 +25,8 @@ const App = () => {
         <Skills />
         <Work />
         <Contact />
+
+        <Footer />
       </CursorProvider>
       
       
