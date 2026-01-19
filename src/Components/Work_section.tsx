@@ -6,7 +6,9 @@ import Eco from '../assets/Images/ECO.png';
 import gym from '../assets/Images/gym.png';
 import shop from '../assets/Images/shop.png';
 
-import "swiper/css";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 
 import {Swiper, SwiperSlide} from 'swiper/react';
