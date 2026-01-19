@@ -18,7 +18,7 @@ const App = () => {
 
 
   return (
-    <div id="Home" className='flex flex-col Poppins' >
+    <div id="Home" className='flex flex-col Poppins font-[400]' >
       <CursorProvider >
         <Navbar  />
         

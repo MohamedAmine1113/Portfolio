@@ -71,7 +71,7 @@ const Work_section = () => {
   return (
    
 
-    <div id='Work_section' className='w-[80%] h-[100vh] m-auto max-lg:h-[60vh] flex flex-col justify-center-self items-center max-lg:h-[50%] max-md:h-[30%] max-lg:w-[80%] max-md:w-full  max-lg:mt-[10px] z-1'>
+    <div id='Work_section' className='bg-green-200 w-[80%] h-[100vh] m-auto max-lg:h-[60vh] flex flex-col justify-center-self items-center max-lg:h-[50%] max-md:h-[30%] max-lg:w-[80%] max-md:w-full  max-lg:mt-[10px] z-1'>
     
         <div className='font-Quick text-clamp-titles mt-[60px]'>
             <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Works</h1>
