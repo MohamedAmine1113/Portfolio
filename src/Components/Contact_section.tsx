@@ -4,6 +4,8 @@ import { FormEvent } from 'react';
 import { useCursor } from './CursorMotion';
 /* import {motion} from 'framer-motion'; */
 
+import Swal from 'sweetalert2'
+
 const Contact_section = () => {
 
     const cursor = useCursor();
@@ -14,19 +16,28 @@ const Contact_section = () => {
 
   const [ ,setResult] = useState("");
 
-  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    formData.append("access_key", "02379a0c-05e2-4ae2-b85a-f8c2e0016290");
+const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+  const formData = new FormData(event.currentTarget);
+  formData.append("access_key", "02379a0c-05e2-4ae2-b85a-f8c2e0016290");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
+  const response = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData
+  });
+
+  const data = await response.json();
+  if (data.success) {
+    await Swal.fire({
+      title: "Success!",
+      text: "Mesaage sent successfully.",
+      icon: "success"
     });
-
-    const data = await response.json();
-    setResult(data.success ? "Success!" : "Error");
-  };
+    setResult("Success");
+  } else {
+    setResult("Error");
+  }
+};
 
   return (
     <div id='Contact-section' className='max-w-[90%] h-[100vh]  max-lg:h-[80vh] flex flex-col justify-center items-center m-auto max-md:mt-[200px] '>
