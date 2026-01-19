@@ -7,6 +7,8 @@ import gym from '../assets/Images/gym.png';
 import shop from '../assets/Images/shop.png';
 
 import "swiper/css";
+
+
 import {Swiper, SwiperSlide} from 'swiper/react';
 
 const projects = [

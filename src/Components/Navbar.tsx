@@ -1,28 +1,25 @@
 import 'boxicons/css/boxicons.min.css';
 /* import logo from '../assets/Images/logo-bg-remover.png';  */
 /* import React, { useState } from 'react'; */
-import React  from 'react';
+
 import { useCursor } from './CursorMotion';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
 
 
 
-const Navbar  = () => {
+const Navbar = () => {
   
   /* const [isOpen, setIsOpen] = useState(false); */
       const cursor = useCursor();
       const scaleCursor = cursor!.scaleCursor;
       const resetCursor = cursor!.resetCursor;
-    
-     
 
-  
-      
+  // gsap animation
 
-      
-    return (
+
+  return (
      
       
       <nav className='w-[100%] z-100'>
@@ -32,6 +29,7 @@ const Navbar  = () => {
               className={`font-Quick before:content-["{"] after:content-["}"] text-[30px] cursor-pointer `}
               onMouseEnter={() => scaleCursor(4)} 
               onMouseLeave={() => resetCursor(1)}
+              
           >
             MBH.
           </a>
@@ -43,6 +41,7 @@ const Navbar  = () => {
                   <FlipLink
                     className='opacity-[100%]'
                     href="#About-section"
+                    
                   >
                     About 
                   </FlipLink>
@@ -51,6 +50,7 @@ const Navbar  = () => {
                 <li>
                   <FlipLink 
                     href="#Work_section" 
+                    
                   >
                     Work
                   </FlipLink>
@@ -59,6 +59,7 @@ const Navbar  = () => {
                 <li>
                   <FlipLink 
                     href="#Contact-section" 
+                    
                   >
                     Contact
                   </FlipLink>

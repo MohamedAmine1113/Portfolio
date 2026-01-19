@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useCursor } from './CursorMotion';
 /* import {motion} from 'framer-motion'; */
 

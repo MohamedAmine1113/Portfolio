@@ -11,10 +11,12 @@ import Footer from './Components/Footer'
 import { CursorProvider } from './Components/CursorMotion'
 
 
+// gsap
 
 
 const App = () => {
-  
+
+
   return (
     <div id="Home" className='flex flex-col Poppins' >
       <CursorProvider >
