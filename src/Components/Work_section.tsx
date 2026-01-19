@@ -1,6 +1,6 @@
 
 import { useCursor } from './CursorMotion';
-import React, {useState} from 'react'
+import {useState} from 'react'
 
 import Eco from '../assets/Images/ECO.png';
 import gym from '../assets/Images/gym.png';

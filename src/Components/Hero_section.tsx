@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Marquee from 'react-fast-marquee'
 import { TypeAnimation } from 'react-type-animation';
 import { useCursor } from './CursorMotion';
