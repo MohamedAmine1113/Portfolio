@@ -14,7 +14,7 @@ const About = () => {
     const resetCursor = cursor!.resetCursor;
 
   return (
-    <div id='About-section' className='bg-blue-200 md:w-[70%] md:h-[150vh] lg:h-[100vh] flex justify-center items-center flex-col gap-[40px] md:gap[20px] md:w-full lg:gap-[35px] lg:flex-row lg:w-[80%] lg:m-auto ' >
+    <div id='About-section' className=' md:w-[70%] md:h-[150vh] lg:h-[100vh] flex justify-center items-center flex-col gap-[40px] md:gap[20px] md:w-full lg:gap-[35px] lg:flex-row lg:w-[80%] lg:m-auto ' >
         
         
         <div className='w-[90%] h-[80%] m-auto flex justify-center items-center sm:w-full md:w-[80%] lg:w-[60%] 2xl:w-[50%]' >

@@ -8,7 +8,7 @@ import "@fontsource/poppins/200.css";
 
 const Footer = () => {
   return (
-    <footer  className='bg-yellow-300 w-full h-[6vh] flex justify-center items-center text-center text-[15px] md:text-[16px] md:mt-[10px] xl:text-[16px] my-[40px] font-[200]' >   
+    <footer  className='w-full max-h-[6vh] flex justify-center items-center text-center text-[15px] md:text-[16px] md:mt-[10px] xl:text-[16px] my-[40px] font-[200]' >   
         <p>© 2025 Mohamed Amine Bahmane. Frontend Developer & UI/UX Designer.</p>        
 
     </footer>
