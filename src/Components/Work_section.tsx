@@ -25,7 +25,7 @@ const projects = [
     {
         num : '02. ',
         title : 'Ecommerce Website',
-        stack : [{name :'bx bxl-javascript text-[#ffdf00]'}, {name : 'bx bxl-html5 text-[#ef6628]'}, {name : 'bx bxl-css3 text-[#016bc1]'} ],
+        stack : [{name :'bx bxl-wordpress text-[#00779e]'} ],
         image : gym,
         live :  'https://gym566.netlify.app/'
         
@@ -33,7 +33,7 @@ const projects = [
     {
         num : '03. ',
         title : 'Ecommerce Website',
-        stack : [{name :'bx bxl-javascript text-[#ffdf00]'}, {name : 'bx bxl-html5 text-[#ef6628]'}, {name : 'bx bxl-css3 text-[#016bc1]'} ],
+        stack : [{name :'bx bxl-wordpress text-[#00779e]'}],
         image : shop,
         live :  'https://gym566.netlify.app/',
         bgcolor : '#f3f3f3'
@@ -93,7 +93,7 @@ const Work_section = () => {
                     ))}
                 </Swiper>
 
-                <div className='h-[13%] flex justify-between items-center mx-[25px] md:mx-[45px] text-[15px] md:text-[16px] md:mt-[10px] xl:text-[20px]'>
+                <div className='h-[13%] flex justify-between items-center my-[10px] mx-[25px] md:mx-[45px] text-[12px] md:text-[16px] md:mt-[10px] xl:text-[20px]'>
                     <div className='flex-row justify-start it ms-center gap-[20px] '>
                         
                         <p className='uppercase  font-bold text-black'>{project.num} {project.title}</p>
@@ -106,7 +106,7 @@ const Work_section = () => {
 
                     </div>
                     <div className='text-black '>
-                        <a href={project.live}  target="_blank" className='underline front-normal text-[12px] md:text-[14px]'>View Project</a>
+                        <a href={project.live}  target="_blank" className='underline front-normal  text-[12px] md:text-[14px]'>View Project</a>
                     </div>
                 </div>
             </div>
