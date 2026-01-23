@@ -40,7 +40,7 @@ const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
 };
 
   return (
-    <div id='Contact-section' className='max-w-[80%] h-[100vh]  max-lg:h-[80vh] max-lg:max-w-[100%] max-md:max-w-[100%] flex flex-col justify-center items-center m-auto max-md:mt-[200px] '>
+    <div id='Contact-section' className='max-w-[80%] h-[100vh]  max-lg:h-[80vh] max-lg:max-w-[95%] max-md:max-w-[100%] flex flex-col justify-center items-center m-auto max-md:mt-[200px] '>
         <div className='w-full flex flex-row justify-center items-center max-md:flex-col max-md:gap-[20px] max-lg:flex-col '>
 
           <div className='w-[40%]   mx-auto max-md:w-[100%] max-md:flex-col  max-md:border-b  p-[10px] max-lg:w-[100%] max-lg:text-center max-lg:border-b '>
