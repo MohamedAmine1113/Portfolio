@@ -11,6 +11,8 @@ import Footer from './Components/Footer'
 import { CursorProvider } from './Components/CursorMotion'
 
 
+
+
 // gsap
 
 

@@ -5,6 +5,9 @@ import 'boxicons/css/boxicons.min.css';
 import { useCursor } from './CursorMotion';
 import { motion } from 'framer-motion';
 
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
 
 
 
@@ -17,13 +20,51 @@ const Navbar = () => {
       const resetCursor = cursor!.resetCursor;
 
   // gsap animation
+  
+
+  
+
+  useGSAP(() => {
+    
+    const tl = gsap.timeline({
+      defaults: {
+        x: 70,
+        opacity: 0,
+        ease: 'power4.inOut',
+        duration: 1,
+        clearProps: 'transform', // 🔥 VERY IMPORTANT for links
+      },
+    });
+
+    tl.from('.about', {})
+      .from('.work', {}, '-=0.8')
+      .from('.contact', {}, '-=0.8');
+
+      gsap.from('.logo', {
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        ease: 'power4.inOut',
+        
+      })
+
+      
+      
+    
+      
+    }, []);
+
+  
+
+
+   
 
 
   return (
      
       
       <nav className='w-[100%] z-100'>
-        <div className='fixed top-[30px] left-[20px]'>
+        <div className='logo fixed top-[30px] left-[20px]'>
           <a
               href="Home"
               className={`font-Quick before:content-["{"] after:content-["}"] text-[30px] cursor-pointer `}
@@ -37,7 +78,7 @@ const Navbar = () => {
 
         <div className={` h-[45px] w-fit text-[13px] flex justify-center items-center font-medium rounded-[15px] rounded-r-none fixed top-[30px] right-[40px] max-md:right-[20px] text-[#F5EAE4]  uppercase text-right`} onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} >
               <ul className='flex flex-col'>
-                <li>
+                <li className='about'>
                   <FlipLink
                     className='opacity-[100%]'
                     href="#About-section"
@@ -47,7 +88,7 @@ const Navbar = () => {
                   </FlipLink>
                 </li >
               
-                <li>
+                <li className='work'>
                   <FlipLink 
                     href="#Work_section" 
                     
@@ -56,7 +97,7 @@ const Navbar = () => {
                   </FlipLink>
                 </li>
 
-                <li>
+                <li className='contact'>
                   <FlipLink 
                     href="#Contact-section" 
                     

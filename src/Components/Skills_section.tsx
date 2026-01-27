@@ -2,7 +2,10 @@
 import Marquee from 'react-fast-marquee'
 import { useCursor } from './CursorMotion';
 
-
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/all';
+gsap.registerPlugin(ScrollTrigger);
 
 const Skills_section = () => {
 
@@ -10,10 +13,26 @@ const Skills_section = () => {
   const scaleCursor = cursor!.scaleCursor;
   const resetCursor = cursor!.resetCursor;
 
+  useGSAP(() => {
+  
+    gsap.from('.skills', {
+      opacity: 0,
+      duration: 1,
+      scale: 1.05,
+      ease: "power4.inOut",
+      scrollTrigger: {
+        trigger: '#skills-section',
+        start: 'top 80%',
+     
+      },
+    })
+  });
+
+  
   return (
-    <div className=' max-w-[80%] h-[50vh] max-md:max-w-[100%] max-md:h-[30vh] max-md:w-full max-lg:max-w-[100%] max-lg:h-[30vh] flex justify-center items-center flex-col m-auto'>
+    <div className='skills max-w-[80%] h-[50vh] max-md:max-w-[100%] max-md:h-[30vh] max-md:w-full max-lg:max-w-[100%] max-lg:h-[30vh] flex justify-center items-center flex-col m-auto' id='skills-section'>
         <h1 className='font-Quick text-clamp-titles mb-[20px]' onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)}>Skills</h1>
-        <Marquee speed={100} pauseOnHover className='cursor-pointer' >
+          <Marquee speed={100} pauseOnHover className='cursor-pointer' >
             <div className='h-[140px] w-[120px] max-md:w-[90px] max-md:h-[90px] flex items-center justify-center text-[60px] max-md:text-[40px] ml-[30px] max-md:ml-[10px] hover:text-[#197799] hover:drop-shadow-[0_0_26px_#197799] transition-all duration-200 ' 
             onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)}><i className='bx bxl-react'></i></div>
             <div className='h-[140px] w-[120px] max-md:w-[90px] max-md:h-[90px] flex items-center justify-center text-[60px] max-md:text-[40px] ml-[30px] max-md:ml-[10px] hover:text-[#05b7ff] hover:drop-shadow-[0_0_26px_#05b7ff] transition-all duration-200'
@@ -37,6 +56,8 @@ const Skills_section = () => {
             <div className='h-[140px] w-[120px] max-md:w-[90px] max-md:h-[90px] flex items-center justify-center text-[60px] max-md:text-[40px] ml-[30px] max-md:ml-[10px] hover:text-[#3179c7] hover:drop-shadow-[0_0_26px_#3179c7] transition-all duration-200'
             onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} ><i className='bx bxl-typescript'></i></div>
         </Marquee> 
+  
+        
     </div>
   )
 }
