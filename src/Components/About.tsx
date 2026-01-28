@@ -2,7 +2,7 @@
 
 import fotopr from '../assets/Images/fotopr.png';
 import { useCursor } from './CursorMotion';
-import amineCV from '../assets/pdf/amineCV.pdf';
+import amineCV from '../assets/pdf/Mohamed_Amine_BahmaneCV.pdf';
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
