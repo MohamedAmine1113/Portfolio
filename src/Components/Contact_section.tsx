@@ -4,6 +4,11 @@ import { FormEvent } from 'react';
 import { useCursor } from './CursorMotion';
 /* import {motion} from 'framer-motion'; */
 
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/all';
+gsap.registerPlugin(ScrollTrigger);
+
 import Swal from 'sweetalert2'
 
 const Contact_section = () => {
@@ -48,7 +53,66 @@ const Contact_section = () => {
     }
   };
 
-  // clear inputs 
+  // gsap animation
+
+  useGSAP(() => {
+        
+
+  gsap.from('.contact-titel', {
+      opacity: 0,
+      duration: 1,
+      scale: 1.05,
+      ease: "power4.inOut",
+      scrollTrigger: {
+        trigger: '#Contact-section',
+        start: 'top 60%',       
+        
+      },
+  })
+
+  gsap.from(['.email', '.phone', '.social'], {
+    y: -10,
+    opacity: 0,
+    duration: 1.5,
+    ease: 'power2.inOut',
+    scrollTrigger: {
+        trigger: '#Contact-section',
+        start: 'top 60%',       
+        
+      },
+  })
+
+  gsap.from(['.emailLink', '.phoneLink', '.socialLink' ,'.message'], {
+    x: -100,
+    opacity: 0,
+    duration: 2,
+    ease: 'power4.inOut',
+    clearProps: 'transform',
+    scrollTrigger: {
+        trigger: '#Contact-section',
+        start: 'top 60%',       
+        toggleActions: 'play none none none',
+      },
+  })
+
+
+  gsap.from('.buttons',{
+    x: -100,
+    opacity: 0,
+    duration: 2.5,
+    ease: 'power4.inOut',
+    clearProps: 'transform',
+    scrollTrigger: {
+        trigger: '#Contact-section',
+        start: 'top 60%',       
+        toggleActions: 'play none none none',
+      },
+  })
+
+
+
+
+  });
 
   
  
@@ -59,28 +123,32 @@ const Contact_section = () => {
 
           <div className='w-[40%]   mx-auto max-md:w-[100%] max-md:flex-col  max-md:border-b  p-[10px] max-lg:w-[100%] max-lg:text-center max-lg:border-b '>
 
-            <div className='font-Quick text-clamp-titles mb-[20px] text-[35px] max-md:mx-auto max-lg:mx-auto w-fit'>
+            <div className='contact-titel font-Quick text-clamp-titles mb-[20px] text-[35px] max-md:mx-auto max-lg:mx-auto w-fit'>
               <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Let's get in <br className='max-md:hidden max-lg:hidden' /> touch</h1>
             </div>
 
             <div className='mb-[20px] font-[500]  max-lg:text-center'>
-              <p >Email :</p>
-              <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[12px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>mohamed.amine.bahmane@gmail.com</a>
+              <p className='email'>Email :</p>
+              <div className='emailLink '>
+                <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[12px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>mohamed.amine.bahmane@gmail.com</a>
+              </div>
             </div>
 
 
             <div className='flex flex-row gap-[50px] max-lg:justify-center max-lg:gap-[80px] lg:flex max-lg;flex-col'>
-               <div className='w-fit '>
-              <p>Phone :</p>
-              <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[12px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>+212 649344406</a>
-            </div>
+
+              <div className='w-fit '>
+                <p className='phone'>Phone :</p>
+                <div className='phoneLink'>
+                  <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className=' text-[12px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>+212 649344406</a>
+                </div>
+              </div>
+
             <div className='w-fit'>
-              <p>Social :</p>
-              <div className='flex flex-row gap-[15px]'>
-                 <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>Github</a>
-                <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>Instagram</a>
+              <p className='social'>Social :</p>
+              <div className='flex flex-row gap-[15px]  socialLink'>
+                <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>Github</a>
                 <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>Linkdin</a>
-                {/* <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>Facbook</a> */}
               </div>
              
             </div>
@@ -90,8 +158,8 @@ const Contact_section = () => {
 
 
           <form onSubmit={onSubmit} action="" className='flex flex-col gap-[25px] items-start w-[60%] text-[35px] font-[600] max-md:items-center max-md:w-full max-md:text-[30px] max-md:leading-14 max-lg:items-center max-lg:w-full max-lg:text-[30px] max-lg:leading-14 max-lg:mt-[20px]'>
-              <span onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)}>My name is <input name='name' type="text" placeholder='YOUR FULL NAME' className=' max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={name} onChange={(e) => setname(e.target.value)}/> and I <input name='message' type="text" placeholder='WEBSITE, FULL-TIME JOB, ETC' className='w-[75%] max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={message} onChange={(e) => setmessage(e.target.value)}/> have a that needs help.<br /> Let’s work together – reach out at <input name='email' type="text" placeholder='YOUR EMAIL ADRESS' className='w-[70%] max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={email} onChange={(e) => setemail(e.target.value)}/> to get started!</span>
-              <button className='text-[16px] font-medium float-left cursor-pointer flex flex-row justify-center items-center' onMouseEnter={() => scaleCursor(2)} onMouseLeave={() => resetCursor(1)} ><i className='bx bx-arrow-back mr-[10px]'></i>Send Info</button>
+              <span className='message' onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)}>My name is <input name='name' type="text" placeholder='YOUR FULL NAME' className='max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={name} onChange={(e) => setname(e.target.value)}/> and I <input name='message' type="text" placeholder='WEBSITE, FULL-TIME JOB, ETC' className='w-[75%] max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={message} onChange={(e) => setmessage(e.target.value)}/> have a that needs help.<br /> Let’s work together – reach out at <input name='email' type="text" placeholder='YOUR EMAIL ADRESS' className='w-[70%] max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={email} onChange={(e) => setemail(e.target.value)}/> to get started!</span>
+              <button className='buttons text-[16px] font-medium float-left cursor-pointer flex flex-row justify-center items-center' onMouseEnter={() => scaleCursor(2)} onMouseLeave={() => resetCursor(1)} ><i className='bx bx-arrow-back mr-[10px]'></i>Send Info</button>
           </form>
 
           
