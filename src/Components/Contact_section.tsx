@@ -140,7 +140,7 @@ const Contact_section = () => {
             <div className='mb-[20px] font-[500]  max-lg:text-center'>
               <p className='email'>Email :</p>
               <div className='emailLink '>
-                <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[12px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>mohamed.amine.bahmane@gmail.com</a>
+                <a href='https://mail.google.com/mail/u/1/#inbox' target='_blank' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[12px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>mohamed.amine.bahmane@gmail.com</a>
               </div>
             </div>
 
@@ -150,15 +150,15 @@ const Contact_section = () => {
               <div className='w-fit '>
                 <p className='phone'>Phone :</p>
                 <div className='phoneLink'>
-                  <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className=' text-[12px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>+212 649344406</a>
+                  <a href='https://whatsapp.com/dl/' target='_blank' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className=' text-[12px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>+212 649344406</a>
                 </div>
               </div>
 
             <div className='w-fit'>
               <p className='social'>Social :</p>
               <div className='flex flex-row gap-[15px]  socialLink'>
-                <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>Github</a>
-                <a onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>Linkdin</a>
+                <a href='https://github.com/MohamedAmine1113' target='_blank' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>Github</a>
+                <a href='https://www.linkedin.com/in/mohamed-amine-mohmed-a96579362/' target='_blank' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>Linkdin</a>
               </div>
              
             </div>

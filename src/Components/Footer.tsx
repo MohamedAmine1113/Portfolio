@@ -37,7 +37,7 @@ const Footer = () => {
             },
           });
 
-        tl.from('.Copyright', {x: 70, duration: 0.5});
+        tl.from('.Copyright', {x: 0, duration: 0.5});
         tl.from('.whatsappIcon', {})
           .from('.instagramIcon', {}, '-=0.8')
           .from('.facebookIcon', {}, '-=0.8')
@@ -47,7 +47,7 @@ const Footer = () => {
       });
 
   return (
-    <footer id="Footer-section"  className=' w-full border-t border-[1px] h-[6vh] flex justify-between items-center px-[5px]  sm:mt-[20px]  text-center text-[15px] md:text-[16px] md:mt-[10px] xl:text-[16px] mt-[40px] font-[200]' >   
+    <footer id="Footer-section"  className='w-100% border-t border-[1px] h-[6vh] flex justify-between items-center px-[5px]  sm:mt-[20px]  text-center text-[15px] md:text-[16px] md:mt-[10px] xl:text-[16px] mt-[40px] font-[200]' >   
         
         
         <span className="text-[20px] ml-[15px] flex gap-[15px] sm:gap-[20px] md:gap-[25px] justify-center items-center cursor-pointer" onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} >
@@ -77,7 +77,7 @@ const Footer = () => {
           
         </span>        
 
-        <p className="Copyright">© 2025 Mohamed Amine Bahmane. All Rights Reserved</p>
+        <p className="Copyright w-fit">© 2025 Mohamed Amine Bahmane. All Rights Reserved</p>
 
     </footer>
   )
