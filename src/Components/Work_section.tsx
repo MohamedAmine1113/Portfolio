@@ -21,7 +21,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 const projects = [
     {
         num : '01. ',
-        title : 'Ecommerce Website',
+        title : 'Mini E-Commerce Website',
         stack : [{name :'bx bxl-javascript text-[#ffdf00]'}, {name : 'bx bxl-html5 text-[#ef6628]'}, {name : 'bx bxl-css3 text-[#016bc1]'} ],
         image : Eco,
         live :  'https://mohamedamine1113.github.io/MiniProject-ECO/'
@@ -29,7 +29,7 @@ const projects = [
     },
     {
         num : '02. ',
-        title : 'Ecommerce Website',
+        title : 'Gym Website',
         stack : [{name :'bx bxl-wordpress text-[#00779e]'} ],
         image : gym,
         live :  'https://gym566.netlify.app/'
@@ -37,7 +37,7 @@ const projects = [
     },
     {
         num : '03. ',
-        title : 'Ecommerce Website',
+        title : 'Clothing Website',
         stack : [{name :'bx bxl-wordpress text-[#00779e]'}],
         image : shop,
         live :  'https://gym566.netlify.app/',
@@ -114,7 +114,7 @@ const Work_section = () => {
                 <div className='h-[13%] flex justify-between items-center my-[10px] mx-[25px] md:mx-[45px] text-[12px] md:text-[16px] md:mt-[10px] xl:text-[20px]'>
                     <div className='flex-row justify-start it ms-center gap-[20px] '>
                         
-                        <p className='uppercase  font-bold text-black name'>{project.num} {project.title}</p>
+                        <p className='font-bold text-black name'>{project.num} {project.title}</p>
                         
                         <div className='tech-stack'>
                             {project.stack.map((tech, index) => (

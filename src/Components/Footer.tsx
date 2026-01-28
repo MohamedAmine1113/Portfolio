@@ -24,7 +24,7 @@ const Footer = () => {
             scrollTrigger: {
               trigger: '#Footer-section',
               start: 'top 95%',
-              markers: true, // remove in production
+             
           },
             defaults: {
               x: -50,
@@ -36,7 +36,7 @@ const Footer = () => {
             
             },
           });
-          
+
         tl.from('.Copyright', {x: 70, duration: 0.5});
         tl.from('.whatsappIcon', {})
           .from('.instagramIcon', {}, '-=0.8')
