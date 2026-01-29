@@ -32,7 +32,7 @@ const projects = [
         title : 'Gym Website',
         stack : [{name :'bx bxl-wordpress text-[#00779e]'} ],
         image : gym,
-        live :  'https://gym566.netlify.app/'
+        live :  'https://gym3334.free.nf/'
         
     },
     {
@@ -40,7 +40,7 @@ const projects = [
         title : 'Clothing Website',
         stack : [{name :'bx bxl-wordpress text-[#00779e]'}],
         image : shop,
-        live :  'https://gym566.netlify.app/',
+        live :  'http://shop3344.free.nf/',
         bgcolor : '#f3f3f3'
         
     }
