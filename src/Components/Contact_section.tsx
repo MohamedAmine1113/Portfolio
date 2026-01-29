@@ -140,7 +140,7 @@ const Contact_section = () => {
             <div className='mb-[20px] font-[500]  max-lg:text-center'>
               <p className='email'>Email :</p>
               <div className='emailLink '>
-                <a href='https://mail.google.com/mail/u/1/#inbox' target='_blank' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[12px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>mohamed.amine.bahmane@gmail.com</a>
+                <a  href='https://mail.google.com/mail/?view=cm&fs=1&to=mohamed.amine.bahmane@gmail.com' target='_blank' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[12px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>mohamed.amine.bahmane@gmail.com</a>
               </div>
             </div>
 
@@ -150,7 +150,7 @@ const Contact_section = () => {
               <div className='w-fit '>
                 <p className='phone'>Phone :</p>
                 <div className='phoneLink'>
-                  <a href='https://whatsapp.com/dl/' target='_blank' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className=' text-[12px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>+212 649344406</a>
+                  <a href='https://wa.me/212649344406' target='_blank' rel='noopener noreferrer' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className=' text-[12px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>+212 649344406</a>
                 </div>
               </div>
 

@@ -132,7 +132,7 @@ const Hero_section = () => {
           </GsapMagic>
         </a>
         
-        <a href="https://mail.google.com/mail/u/1/#inbox" target='_blank'>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mohamed.amine.bahmane@gmail.com" target='_blank'>
           <GsapMagic>
               <svg className='iconEmail'  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 24 24" >
                 <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 2v.51l-8 6.22-8-6.22V6zM4 18V9.04l7.39 5.74c.18.14.4.21.61.21s.43-.07.61-.21L20 9.03v8.96H4Z"></path>

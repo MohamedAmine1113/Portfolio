@@ -47,11 +47,11 @@ const Footer = () => {
       });
 
   return (
-    <footer id="Footer-section"  className='w-100% border-t border-[1px] h-[6vh] flex justify-between items-center px-[5px]  sm:mt-[20px]  text-center text-[15px] md:text-[16px] md:mt-[10px] xl:text-[16px] mt-[40px] font-[200]' >   
+    <footer id="Footer-section"  className='w-100% border-t border-[1px] h-[6vh] flex justify-between items-center px-[5px]  sm:mt-[50px]  text-center text-[10px] md:text-[16px] md:mt-[10px] xl:text-[16px] mt-[40px] font-[200]' >   
         
         
         <span className="text-[20px] ml-[15px] flex gap-[15px] sm:gap-[20px] md:gap-[25px] justify-center items-center cursor-pointer" onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} >
-          <a href="https://whatsapp.com/dl/" target="_blank" className="whatsappIcon" >
+          <a href="https://wa.me/212649344406" target="_blank" className="whatsappIcon" >
             <GsapMagic>
               <i className="bx bxl-whatsapp hover:text-[#25D366]"></i>
             </GsapMagic>
