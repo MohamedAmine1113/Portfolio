@@ -89,7 +89,7 @@ const Work_section = () => {
   return (
    
 
-    <div id='Work_section' className=' w-[80%] h-[100vh] m-auto max-lg:h-[60vh] flex flex-col justify-center-self items-center max-lg:h-[50%] max-md:h-[30%] max-md:w-[100%] max-lg:w-[80%] max-lg:w-[100%] max-md:w-full  max-lg:mt-[10px] z-1'>
+    <div id='Work_section' className=' w-[80%] h-[100vh] m-auto max-lg:h-[60vh] flex flex-col justify-center-self items-center max-lg:h-[50%] max-md:h-[30%] max-md:w-[100%] max-lg:w-[80%]  max-md:w-full  max-lg:mt-[10px] z-1'>
     
         <div className='font-Quick text-clamp-titles mt-[20px] md:mt-[30px] lg:mt-[40px] xl:mt-[60px] w-fit work-titel' >
             <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Works</h1>
@@ -99,7 +99,7 @@ const Work_section = () => {
 
         
 
-            <div className='work-titel w-[95%] h-[60%] md:w-[95%] md:h-[65%] lg:h-[45%] xl:w-[70%] xl:h-[63%] bg-[#F5EAE4] m-auto rounded-[20px]' onMouseEnter={() => scaleCursor(1.5)} onMouseLeave={() => resetCursor(1)} >
+            <div className='work-titel w-[95%] h-[60%] md:w-[95%] md:h-[65%] lg:h-[45%] xl:w-[70%] xl:h-[70%] 2xl:h-[63%] bg-[#F5EAE4] m-auto rounded-[20px]' onMouseEnter={() => scaleCursor(1.5)} onMouseLeave={() => resetCursor(1)} >
                 
                 <Swiper spaceBetween={50} slidesPerView={1} onSlideChange={handleSlideChange} >
                     {projects.map((project, index) => (
