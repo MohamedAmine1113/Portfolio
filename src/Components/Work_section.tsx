@@ -32,7 +32,7 @@ const projects = [
         title : 'Gym Website',
         stack : [{name :'bx bxl-wordpress text-[#00779e]'} ],
         image : gym,
-        live :  'https://gym3334.free.nf/'
+        live :  'https://gym3334.infy.click/'
         
     },
     {
