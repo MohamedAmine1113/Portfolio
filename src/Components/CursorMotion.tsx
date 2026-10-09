@@ -12,8 +12,7 @@ export const CursorProvider = ({ children }: { children: React.ReactNode }) => {
 
     useEffect(() => {
         const HandmouseMove = (e: MouseEvent) => {
-            const cursor = cursorRef.current;
-            if (!cursor) return
+            const cursor = document.getElementById('cursor') as HTMLElement
             gsap.to(cursor, {
                 x: e.clientX - 30 / 2 ,
                 y: e.clientY - 30 / 2 ,
@@ -23,7 +22,6 @@ export const CursorProvider = ({ children }: { children: React.ReactNode }) => {
                 
             })
         }
-        if (!window.matchMedia('(pointer: fine) and (prefers-reduced-motion: no-preference)').matches) return;
         window.addEventListener('mousemove', HandmouseMove)
             
         return () => {  
@@ -59,7 +57,7 @@ export const CursorProvider = ({ children }: { children: React.ReactNode }) => {
 
     <CursorMotion.Provider value={{ scaleCursor, resetCursor , setZIndex /* colorDefference */ }}>
 
-         <div ref={cursorRef} id="cursor" className="fixed top-0 left-0 hidden h-[30px] w-[30px] rounded-full pointer-events-none -z-100 md:block" />
+         <div ref={cursorRef} id="cursor" className="fixed top-0 left-0 h-[30px] w-[30px] rounded-full pointer-events-none -z-100 " />
          {children}
 
     </CursorMotion.Provider>
