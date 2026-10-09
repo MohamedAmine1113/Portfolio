@@ -1,275 +1,52 @@
+import { useState, type FormEvent } from 'react';
 
-import { useState } from 'react';
-import { FormEvent } from 'react';
-import { useCursor } from './CursorMotion';
-/* import {motion} from 'framer-motion'; */
+export default function Contact_section() {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState('');
+  const [success, setSuccess] = useState(false);
 
-import addNotification from 'react-push-notification';
-
-
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
-gsap.registerPlugin(ScrollTrigger);
-
-
-
-const Contact_section = () => {
-
-    const cursor = useCursor();
-    const scaleCursor = cursor!.scaleCursor;
-    const resetCursor = cursor!.resetCursor;
-
-  // contact form submit function
-
-  
-  const [ name ,setname] = useState("");
-  const [ message ,setmessage] = useState("");
-  const [ email ,setemail] = useState("");
-
-  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    formData.append("access_key", "02379a0c-05e2-4ae2-b85a-f8c2e0016290");
-
+    if (loading) return;
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    data.append('access_key', '02379a0c-05e2-4ae2-b85a-f8c2e0016290');
+    setLoading(true);
+    setStatus('');
+    setSuccess(false);
     try {
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
-
-    const data = await response.json();
-
-    
-
-    
-
-    if (data.success) {
-      
-      alert("Message sent successfully.");
-      setname("");
-      setmessage("");
-      setemail("");
-  } else {
-    addNotification({
-      title: 'Error',
-      message: 'Something went wrong.',
-      duration: 4000,
-      theme: 'error',
-    });
+      const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+      if (!response.ok) throw new Error('Request failed');
+      const result: { success?: boolean } = await response.json();
+      if (!result.success) throw new Error('Submission rejected');
+      form.reset();
+      setSuccess(true);
+      setStatus('Thank you! Your message has been sent.');
+    } catch {
+      setStatus('Could not send your message. Please email me directly or try again.');
+    } finally {
+      setLoading(false);
+    }
   }
-  } catch (error) {
-    console.error('Contact form submission failed:', error);
-    alert('Unable to send your message right now. Please try again later.');
-  }
-};
-      
-      
- 
-
-
-  // gsap animation
-
-  useGSAP(() => {
-        
-
-  gsap.from('.contact-titel', {
-      opacity: 0,
-      duration: 1,
-      scale: 1.05,
-      ease: "power4.inOut",
-      scrollTrigger: {
-        trigger: '#Contact-section',
-        start: 'top 60%',       
-        
-      },
-  })
-
-  gsap.from(['.email', '.phone', '.social'], {
-    y: -10,
-    opacity: 0,
-    duration: 1.5,
-    ease: 'power2.inOut',
-    scrollTrigger: {
-        trigger: '#Contact-section',
-        start: 'top 60%',       
-        
-      },
-  })
-
-  gsap.from(['.emailLink', '.phoneLink', '.socialLink' ,'.message'], {
-    x: -100,
-    opacity: 0,
-    duration: 2,
-    ease: 'power4.inOut',
-    clearProps: 'transform',
-    scrollTrigger: {
-        trigger: '#Contact-section',
-        start: 'top 60%',       
-        toggleActions: 'play none none none',
-      },
-  })
-
-
-  gsap.from('.buttons',{
-    x: -100,
-    opacity: 0,
-    duration: 2.5,
-    ease: 'power4.inOut',
-    clearProps: 'transform',
-    scrollTrigger: {
-        trigger: '#Contact-section',
-        start: 'top 60%',       
-        toggleActions: 'play none none none',
-      },
-  })
-
-
-
-
-  });
-
-  
- 
 
   return (
-    <div id='Contact-section' className='max-w-[80%] h-[100vh]  max-lg:h-[80vh] max-lg:max-w-[95%] max-md:max-w-[100%] flex flex-col justify-center items-center m-auto max-md:mt-[200px] '>
-        <div className='w-full flex flex-row justify-center items-center max-md:flex-col max-md:gap-[20px] max-lg:flex-col '>
-
-          <div className='w-[40%]   mx-auto max-md:w-[100%] max-md:flex-col  max-md:border-b  p-[10px] max-lg:w-[100%] max-lg:text-center max-lg:border-b '>
-
-            <div className='contact-titel font-Quick text-clamp-titles mb-[20px] text-[35px] max-md:mx-auto max-lg:mx-auto w-fit'>
-              <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Let's get in <br className='max-md:hidden max-lg:hidden' /> touch</h1>
-            </div>
-
-            <div className='mb-[20px] font-[500]  max-lg:text-center'>
-              <p className='email'>Email :</p>
-              <div className='emailLink '>
-                <a  href='https://mail.google.com/mail/?view=cm&fs=1&to=mohamed.amine.bahmane@gmail.com' target='_blank' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[12px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>mohamed.amine.bahmane@gmail.com</a>
-              </div>
-            </div>
-
-
-            <div className='flex flex-row gap-[50px] max-lg:justify-center max-lg:gap-[80px] lg:flex max-lg;flex-col'>
-
-              <div className='w-fit '>
-                <p className='phone'>Phone :</p>
-                <div className='phoneLink'>
-                  <a href='https://wa.me/212649344406' target='_blank' rel='noopener noreferrer' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className=' text-[12px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out'>+212 649344406</a>
-                </div>
-              </div>
-
-            <div className='w-fit'>
-              <p className='social'>Social :</p>
-              <div className='flex flex-row gap-[15px]  socialLink'>
-                <a href='https://github.com/MohamedAmine1113' target='_blank' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>Github</a>
-                <a href='https://www.linkedin.com/in/mohamed-amine-mohmed-a96579362/' target='_blank' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} className='text-[13px] opacity-[20%] hover:opacity-[100%] mt-[5px] cursor-pointer transition duration-700 ease-in-out '>Linkdin</a>
-              </div>
-             
-            </div>
-          </div>
-           
+    <section id="Contact-section" className="mx-auto w-full max-w-7xl scroll-mt-24 px-5 py-24 sm:px-8">
+      <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+        <div>
+          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#EC5938]">Let's collaborate</p>
+          <h2 className="mb-6 font-Quick text-clamp-titles">Let's get in touch.</h2>
+          <p className="mb-8 max-w-lg leading-8 text-[#F5EAE4]/70">Have an idea, an opportunity or a project in mind? Send a message and let's talk about it.</p>
+          <a className="block break-all text-[#EC5938] underline underline-offset-4" href="mailto:mohamed.amine.bahmane@gmail.com">mohamed.amine.bahmane@gmail.com</a>
+          <a className="mt-5 inline-block text-sm underline underline-offset-4" href="https://github.com/MohamedAmine1113" target="_blank" rel="noopener noreferrer">View GitHub ↗</a>
         </div>
-
-
-          <form onSubmit={onSubmit} action="" className='flex flex-col gap-[25px] items-start w-[60%] text-[35px] font-[600] max-md:items-center max-md:w-full max-md:text-[30px] max-md:leading-14 max-lg:items-center max-lg:w-full max-lg:text-[30px] max-lg:leading-14 max-lg:mt-[20px] max-2xl:text-[28px]'>
-              
-              <span className='message' onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)}>My name is <input name='name' type="text" placeholder='YOUR FULL NAME' className='max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={name} onChange={(e) => setname(e.target.value)}/> and I <input name='message' type="text" placeholder='WEBSITE, FULL-TIME JOB, ETC' className='w-[75%] max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={message} onChange={(e) => setmessage(e.target.value)}/> have a that needs help.<br /> Let’s work together – reach out at <input name='email' type="email" autoComplete="email" placeholder='YOUR EMAIL ADDRESS' className='w-[70%] max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={email} onChange={(e) => setemail(e.target.value)}/> to get started!</span>
-              
-              <button className='buttons text-[16px] font-medium float-left cursor-pointer flex flex-row justify-center items-center group' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} type='submit' >
-                <div className="bg-[#EC5938] text-[20px] flex items-center justify-center w-[25px] h-[25px] mr-[5px] rounded-full transition-transform duration-500 group-hover:rotate-90">
-                    <i className="bxr bx-arrow-up-stroke t"></i>
-                </div>
-                Send Info
-                
-              </button>
-          </form>
-
-          
-          
-        </div>
-        <div id="notification-container" />
-    </div>
-  )
-}
-
-export default Contact_section
-
-
-/* const DURATION = 0.25;
-const STAGGER = 0.025;
-
-interface FlipLinkProps {
-  children: string;
-  href: string;
-  className?: string;
-}
-const FlipLink = ({ children, href, className }: FlipLinkProps) => {
-  return (
-    <motion.a
-      initial="initial"
-      whileHover="hovered"
-      href={href}
-      
-      className={` text-[25px] font-[500] w-[150px] h-[35px] relative block overflow-hidden whitespace-nowrap  mb-[25px] mr-[35px] hover:bg-[#EC5938] hover:text-[#0D0D0D] text-center rounded-[6px] ${className ? ` ${className}` : ''}`}
-      style={{
-        lineHeight: 1.3,
-      }}
-    
-
-    >
-     
-      <div >
-         
-        {children.split("").map((l, i) => (
-          <motion.span
-            variants={{
-              initial: {
-                y: 0,
-              },
-              hovered: {
-                y: "-100%",
-              },
-            }}
-            transition={{
-              duration: DURATION,
-              ease: "easeInOut",
-              delay: STAGGER * i,
-            }}
-            className="inline-block "
-            key={i}
-          >
-            {l} 
-          </motion.span>
-        ))}
-
-        
+        <form onSubmit={onSubmit} className="flex flex-col gap-5 rounded-2xl border border-white/15 bg-white/[0.04] p-6 sm:p-8">
+          <div><label htmlFor="contact-name" className="mb-2 block text-sm font-medium">Your name</label><input id="contact-name" name="name" autoComplete="name" required minLength={2} maxLength={100} className="w-full rounded-lg border border-white/20 bg-[#171717] px-4 py-3 text-white outline-none focus:border-[#EC5938]" placeholder="Your full name" /></div>
+          <div><label htmlFor="contact-email" className="mb-2 block text-sm font-medium">Email address</label><input id="contact-email" name="email" type="email" autoComplete="email" required maxLength={254} className="w-full rounded-lg border border-white/20 bg-[#171717] px-4 py-3 text-white outline-none focus:border-[#EC5938]" placeholder="you@example.com" /></div>
+          <div><label htmlFor="contact-message" className="mb-2 block text-sm font-medium">Message</label><textarea id="contact-message" name="message" required minLength={10} maxLength={3000} rows={5} className="w-full resize-y rounded-lg border border-white/20 bg-[#171717] px-4 py-3 text-white outline-none focus:border-[#EC5938]" placeholder="Tell me about your project..." /></div>
+          <button disabled={loading} type="submit" className="rounded-lg bg-[#EC5938] px-6 py-4 font-semibold text-[#0D0D0D] transition hover:bg-[#ff795c] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white disabled:cursor-wait disabled:opacity-60">{loading ? 'Sending…' : 'Send message ↗'}</button>
+          <p role="status" aria-live="polite" className={success ? 'text-sm text-green-300' : 'text-sm text-[#ffad9c]'}>{status}</p>
+        </form>
       </div>
-      <div className="absolute inset-0">
-        
-        {children.split("").map((l, i) => (
-          <motion.span
-            variants={{
-              initial: {
-                y: "100%",
-              },
-              hovered: {
-                y: 0,
-              },
-            }}
-            transition={{
-              duration: DURATION,
-              ease: "easeInOut",
-              delay: STAGGER * i,
-            }}
-            className="inline-block "
-            
-            key={i}
-          >
-            {l}
-          </motion.span>
-        ))}
-      </div>
-    </motion.a>
+    </section>
   );
-}; */
+}
