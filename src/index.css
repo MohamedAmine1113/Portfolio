@@ -61,7 +61,16 @@
     border:1px solid rgba(255, 255, 255, 0.20);
 
 }
-svg:hover{
+.interactive-icon:hover {
     fill: #0D0D0D;
-    transition: all 0.3s ease-in-out;
+    transition: fill 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
