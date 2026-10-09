@@ -77,7 +77,7 @@ const Footer = () => {
           
         </span>        
 
-        <p className="Copyright w-fit">© 2025 Mohamed Amine Bahmane. All Rights Reserved</p>
+        <p className="Copyright w-fit">© {new Date().getFullYear()} Mohamed Amine Bahmane. All Rights Reserved</p>
 
     </footer>
   )
