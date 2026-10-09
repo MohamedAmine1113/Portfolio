@@ -1,146 +1,37 @@
-
-import { useCursor } from './CursorMotion';
-import {useState} from 'react'
-
 import Eco from '../assets/Images/ECO.png';
 import gym from '../assets/Images/gym.png';
 import shop from '../assets/Images/shop.png';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
-gsap.registerPlugin(ScrollTrigger);
-
-
-import {Swiper, SwiperSlide} from 'swiper/react';
-
 const projects = [
-    {
-        num : '01. ',
-        title : 'Mini E-Commerce Website',
-        stack : [{name :'bx bxl-javascript text-[#ffdf00]'}, {name : 'bx bxl-html5 text-[#ef6628]'}, {name : 'bx bxl-css3 text-[#016bc1]'} ],
-        image : Eco,
-        live :  'https://mohamedamine1113.github.io/MiniProject-ECO/'
-        
-    },
-    {
-        num : '02. ',
-        title : 'Gym Website',
-        stack : [{name :'bx bxl-wordpress text-[#00779e]'} ],
-        image : gym,
-        live :  'https://gym3334.infy.click/'
-        
-    },
-    {
-        num : '03. ',
-        title : 'Clothing Website',
-        stack : [{name :'bx bxl-wordpress text-[#00779e]'}],
-        image : shop,
-        live :  'http://shop3344.free.nf/',
-        bgcolor : '#f3f3f3'
-        
-    }
-]
-const Work_section = () => {
+  { title: 'Mini E-Commerce Website', category: 'Frontend Development', description: 'Responsive shopping experience created with HTML, CSS and JavaScript.', technologies: ['HTML', 'CSS', 'JavaScript'], image: Eco, live: 'https://mohamedamine1113.github.io/MiniProject-ECO/', code: 'https://github.com/MohamedAmine1113/MiniProject-ECO' },
+  { title: 'Gym Website', category: 'Web Design', description: 'A fitness-focused website designed to present services and help visitors get started.', technologies: ['WordPress'], image: gym, live: 'https://gym3334.infy.click/', code: '' },
+  { title: 'Clothing Website', category: 'E-Commerce', description: 'Online clothing storefront with a clean, product-first presentation.', technologies: ['WordPress'], image: shop, live: 'http://shop3344.free.nf/', code: '' },
+];
 
-    const cursor = useCursor();
-    const scaleCursor = cursor!.scaleCursor;
-    const resetCursor = cursor!.resetCursor;
-    /* const setIndex = cursor!.setZIndex */
-
-    const [project, setProject] = useState(projects[0]);
-
-    const handleSlideChange = (swiper: { activeIndex: number }) => {
-        const currentIndex = swiper.activeIndex;
-        // You can use the currentIndex to update the displayed project details
-        // For example, you might want to set the project state here
-        setProject(projects[currentIndex]);
-    }
-
-
-    // animation gsap
-     useGSAP(() => {
-        
-
-
-
-
-
-
-
-        gsap.from('.work-titel', {
-            opacity: 0,
-            duration: 1,
-            scale: 1.05,
-            ease: "power4.inOut",
-            scrollTrigger: {
-                trigger: '#Work_section',
-                start: 'top 50%',
-                
-            },
-        })
-
-
-    });
+export default function Work_section() {
   return (
-   
-
-    <div id='Work_section' className=' w-[80%] h-[100vh] m-auto max-lg:h-[60vh] flex flex-col justify-center-self items-center min-h-[420px] max-md:min-h-[360px] max-md:w-[100%] max-lg:w-[80%]  max-md:w-full  max-lg:mt-[10px] z-1'>
-    
-        <div className='font-Quick text-clamp-titles mt-[20px] md:mt-[30px] lg:mt-[40px] xl:mt-[60px] w-fit work-titel' >
-            <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Works</h1>
-        </div>
-
-
-
-        
-
-            <div className='work-titel w-[95%] h-[60%] md:w-[95%] md:h-[65%] lg:h-[45%] xl:w-[70%] xl:h-[70%] 2xl:h-[63%] bg-[#F5EAE4] m-auto rounded-[20px]' onMouseEnter={() => scaleCursor(1.5)} onMouseLeave={() => resetCursor(1)} >
-                
-                <Swiper spaceBetween={50} slidesPerView={1} onSlideChange={handleSlideChange} >
-                    {projects.map((project, index) => (
-                        <SwiperSlide key={index} >
-                            <div className='w-[95%] h-[82%] relative group flex justify-center items-center m-auto work-titel'>
-                                <img src={project.image} alt={`${project.title} screenshot`} className='mt-[25px] rounded-[20px]' loading='lazy' /> 
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-
-                <div className='h-[13%] flex justify-between items-center my-[10px] mx-[25px] md:mx-[45px] text-[12px] md:text-[16px] md:mt-[10px] xl:text-[20px]'>
-                    <div className='flex-row justify-start it ms-center gap-[20px] '>
-                        
-                        <p className='font-bold text-black name'>{project.num} {project.title}</p>
-                        
-                        <div className='tech-stack'>
-                            {project.stack.map((tech, index) => (
-                                <i key={index} className={`${tech.name} `}></i>
-                            ))}
-                        </div>
-
-                    </div>
-
-                    <div className='text-black view-project'>
-                        <a href={project.live}  target="_blank" rel="noopener noreferrer" className='  underline front-normal  text-[12px] md:text-[14px]'>View Project</a>
-                    </div>
-
-                </div>
+    <section id="Work_section" aria-labelledby="projects-heading" className="mx-auto w-full max-w-7xl scroll-mt-24 px-5 py-24 sm:px-8">
+      <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+        <div><p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#EC5938]">Selected work</p><h2 id="projects-heading" className="font-Quick text-clamp-titles">Projects</h2></div>
+        <a href="https://github.com/MohamedAmine1113" target="_blank" rel="noopener noreferrer" className="rounded-full border border-[#EC5938] px-5 py-3 text-sm font-semibold transition hover:bg-[#EC5938] hover:text-black">All projects ↗</a>
+      </div>
+      <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+        {projects.map((project, index) => (
+          <article key={project.title} className="group overflow-hidden rounded-2xl border border-white/15 bg-white/[0.04] transition duration-300 hover:-translate-y-1 hover:border-[#EC5938]/60">
+            <div className="aspect-[16/11] overflow-hidden bg-[#F5EAE4]"><img src={project.image} alt={`Screenshot of ${project.title}`} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" /></div>
+            <div className="flex flex-col gap-4 p-6">
+              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#EC5938]">{String(index + 1).padStart(2, '0')} / {project.category}</span>
+              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <p className="min-h-16 text-sm leading-7 text-[#F5EAE4]/70">{project.description}</p>
+              <div className="flex flex-wrap gap-2">{project.technologies.map(tech => <span key={tech} className="rounded-full border border-white/15 px-3 py-1 text-xs">{tech}</span>)}</div>
+              <div className="mt-3 flex flex-wrap gap-4 text-sm font-semibold">
+                <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-[#EC5938] underline underline-offset-4 hover:text-white">Live website ↗</a>
+                {project.code && <a href={project.code} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-[#EC5938]">Source code ↗</a>}
+              </div>
             </div>
-        
-        
-        
-    </div> 
-
-
-
-        
-
-    
-  )
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
-
-export default Work_section
