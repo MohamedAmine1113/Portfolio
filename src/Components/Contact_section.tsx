@@ -32,6 +32,7 @@ const Contact_section = () => {
     const formData = new FormData(event.currentTarget);
     formData.append("access_key", "02379a0c-05e2-4ae2-b85a-f8c2e0016290");
 
+    try {
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData
@@ -56,6 +57,10 @@ const Contact_section = () => {
       duration: 4000,
       theme: 'error',
     });
+  }
+  } catch (error) {
+    console.error('Contact form submission failed:', error);
+    alert('Unable to send your message right now. Please try again later.');
   }
 };
       
@@ -169,7 +174,7 @@ const Contact_section = () => {
 
           <form onSubmit={onSubmit} action="" className='flex flex-col gap-[25px] items-start w-[60%] text-[35px] font-[600] max-md:items-center max-md:w-full max-md:text-[30px] max-md:leading-14 max-lg:items-center max-lg:w-full max-lg:text-[30px] max-lg:leading-14 max-lg:mt-[20px] max-2xl:text-[28px]'>
               
-              <span className='message' onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)}>My name is <input name='name' type="text" placeholder='YOUR FULL NAME' className='max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={name} onChange={(e) => setname(e.target.value)}/> and I <input name='message' type="text" placeholder='WEBSITE, FULL-TIME JOB, ETC' className='w-[75%] max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={message} onChange={(e) => setmessage(e.target.value)}/> have a that needs help.<br /> Let’s work together – reach out at <input name='email' type="text" placeholder='YOUR EMAIL ADRESS' className='w-[70%] max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={email} onChange={(e) => setemail(e.target.value)}/> to get started!</span>
+              <span className='message' onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)}>My name is <input name='name' type="text" placeholder='YOUR FULL NAME' className='max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={name} onChange={(e) => setname(e.target.value)}/> and I <input name='message' type="text" placeholder='WEBSITE, FULL-TIME JOB, ETC' className='w-[75%] max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={message} onChange={(e) => setmessage(e.target.value)}/> have a that needs help.<br /> Let’s work together – reach out at <input name='email' type="email" autoComplete="email" placeholder='YOUR EMAIL ADDRESS' className='w-[70%] max-md:w-full text-[25px] text-[#F5EAE4]/50 border-b focus:bg-[#F5EAE4]/5 focus:outline-none focus:p-[5px] focus:border-none focus:rounded-[6px] transition duration-700 ease max-lg:h-[40px] max-lg:text-[20px]' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(3)} required value={email} onChange={(e) => setemail(e.target.value)}/> to get started!</span>
               
               <button className='buttons text-[16px] font-medium float-left cursor-pointer flex flex-row justify-center items-center group' onMouseEnter={() => scaleCursor(0)} onMouseLeave={() => resetCursor(1)} type='submit' >
                 <div className="bg-[#EC5938] text-[20px] flex items-center justify-center w-[25px] h-[25px] mr-[5px] rounded-full transition-transform duration-500 group-hover:rotate-90">
