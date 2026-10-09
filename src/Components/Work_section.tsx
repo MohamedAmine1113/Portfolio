@@ -89,7 +89,7 @@ const Work_section = () => {
   return (
    
 
-    <div id='Work_section' className=' w-[80%] h-[100vh] m-auto max-lg:h-[60vh] flex flex-col justify-center-self items-center max-lg:h-[50%] max-md:h-[30%] max-md:w-[100%] max-lg:w-[80%]  max-md:w-full  max-lg:mt-[10px] z-1'>
+    <div id='Work_section' className=' w-[80%] h-[100vh] m-auto max-lg:h-[60vh] flex flex-col justify-center-self items-center min-h-[420px] max-md:min-h-[360px] max-md:w-[100%] max-lg:w-[80%]  max-md:w-full  max-lg:mt-[10px] z-1'>
     
         <div className='font-Quick text-clamp-titles mt-[20px] md:mt-[30px] lg:mt-[40px] xl:mt-[60px] w-fit work-titel' >
             <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Works</h1>
@@ -105,7 +105,7 @@ const Work_section = () => {
                     {projects.map((project, index) => (
                         <SwiperSlide key={index} >
                             <div className='w-[95%] h-[82%] relative group flex justify-center items-center m-auto work-titel'>
-                                <img src={project.image} alt='' className='mt-[25px] rounded-[20px]' /> 
+                                <img src={project.image} alt={`${project.title} screenshot`} className='mt-[25px] rounded-[20px]' loading='lazy' /> 
                             </div>
                         </SwiperSlide>
                     ))}
@@ -125,7 +125,7 @@ const Work_section = () => {
                     </div>
 
                     <div className='text-black view-project'>
-                        <a href={project.live}  target="_blank" className='  underline front-normal  text-[12px] md:text-[14px]'>View Project</a>
+                        <a href={project.live}  target="_blank" rel="noopener noreferrer" className='  underline front-normal  text-[12px] md:text-[14px]'>View Project</a>
                     </div>
 
                 </div>
