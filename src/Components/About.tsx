@@ -68,15 +68,15 @@ const About = () => {
     }, []);
 
   return (
-    <div id='About-section' className=' md:w-[70%] md:h-[120vh] lg:h-[100vh] flex justify-center items-center flex-col md:gap[20px] md:w-full lg:gap-[35px] lg:flex-row lg:w-[80%] lg:m-auto ' >
+    <div id='About-section' className=' md:w-[70%] md:min-h-[120vh] lg:min-h-[100vh] flex justify-center items-center flex-col md:gap-[20px] md:w-full lg:gap-[35px] lg:flex-row lg:w-[80%] lg:m-auto ' >
         
         
-        <div className='foto w-[95%] h-[80%] m-auto flex justify-center items-center sm:w-full md:w-[80%] lg:w-[60%] 2xl:w-[60%]' >
-                <img src={fotopr} alt="foto" className='w-[400px] md:w-[500px] md:h-[600px] lg:h-full lg:w-full' />
+        <div className='foto w-[95%] h-auto m-auto flex justify-center items-center sm:w-full md:w-[80%] lg:w-[60%] 2xl:w-[60%]' >
+                <img src={fotopr} alt="Portrait of Mohamed Amine Bahmane" className='w-full max-w-[400px] h-auto md:max-w-[500px] lg:w-full' />
         </div>
 
         
-        <div className=' w-[95%] h-full md:h-[80%] lg:max-h-[80%] flex flex-col justify-center items-start gap-[40px] xl:gap-[20px] 2xl:gap-[40px]  md:gap-[30px] 2xl:gap-[100px] 2xl:ml-[40px]'>
+        <div className=' w-[95%] h-auto md:h-auto lg:max-h-[80%] flex flex-col justify-center items-start gap-[40px] xl:gap-[20px] 2xl:gap-[40px]  md:gap-[30px] 2xl:gap-[100px] 2xl:ml-[40px]'>
             <div className='w-full title' >
                 <h1 className='mx-auto font-Quick text-center m-[10px] text-clamp-titles ' onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)}>About Me</h1>
             </div>
