@@ -63,10 +63,10 @@ const Navbar = () => {
   return (
      
       
-      <nav aria-label='Main navigation' className='w-[100%] z-100'>
+      <nav className='w-[100%] z-100'>
         <div className='logo fixed top-[30px] left-[20px]'>
           <a
-              href="#Home"
+              href="Home"
               className={`font-Quick before:content-["{"] after:content-["}"] text-[30px] cursor-pointer `}
               onMouseEnter={() => scaleCursor(4)} 
               onMouseLeave={() => resetCursor(1)}
