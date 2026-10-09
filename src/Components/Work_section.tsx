@@ -105,7 +105,7 @@ const Work_section = () => {
                     {projects.map((project, index) => (
                         <SwiperSlide key={index} >
                             <div className='w-[95%] h-[82%] relative group flex justify-center items-center m-auto work-titel'>
-                                <img src={project.image} alt={`${project.title} screenshot`} className='mt-[25px] rounded-[20px]' loading='lazy' /> 
+                                <img src={project.image} alt='' className='mt-[25px] rounded-[20px]' /> 
                             </div>
                         </SwiperSlide>
                     ))}
@@ -125,7 +125,7 @@ const Work_section = () => {
                     </div>
 
                     <div className='text-black view-project'>
-                        <a href={project.live}  target="_blank" rel="noopener noreferrer" className='  underline front-normal  text-[12px] md:text-[14px]'>View Project</a>
+                        <a href={project.live}  target="_blank" className='  underline front-normal  text-[12px] md:text-[14px]'>View Project</a>
                     </div>
 
                 </div>
