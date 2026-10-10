@@ -136,7 +136,7 @@ const Work_section = () => {
                                 <span className='w-1.5 h-1.5 rounded-full bg-[#EC5938]' aria-hidden='true'></span>
                                 <span className='uppercase rounded-full bg-[#EC5938]/10 px-2.5 py-1'>Live Project</span>
                             </div>
-                            <h2 className='font-Instrument text-[22px] sm:text-[28px] lg:text-[32px] font-bold leading-tight tracking-tight'>
+                            <h2 className='Poppins text-[20px] sm:text-[26px] lg:text-[30px] !font-bold leading-tight tracking-tight'>
                                 {project.num}{project.title}
                             </h2>
                             <p className='Poppins text-[#111111]/65 text-[12px] sm:text-[14px] leading-relaxed mt-3 max-w-[650px]'>
@@ -154,7 +154,7 @@ const Work_section = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='md:border-l border-[#111111]/15 md:pl-7 md:pt-4 flex flex-col justify-between gap-5 md:gap-8'>
+                        <div className='md:border-l border-[#111111]/15 md:pl-7 md:pt-10 flex flex-col justify-between gap-5 md:gap-8'>
                             <div className='flex items-start justify-between md:justify-start gap-4'>
                                 <div className='flex gap-1' aria-hidden='true'>
                                     <span className='w-5 h-5 rounded-full border border-[#111111]/35'></span>
