@@ -3,8 +3,8 @@ import { useCursor } from './CursorMotion';
 import { useState, useRef } from 'react'
 
 import Eco from '../assets/Images/ECO.png';
-import gym from '../assets/Images/gym.png';
-import shop from '../assets/Images/shop.png';
+import gym from '../assets/Images/Gym Website UI Mockup Showcase.png';
+import shop from '../assets/Images/Cinematic Clothing Website Showcase (1).png';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
