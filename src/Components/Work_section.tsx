@@ -26,7 +26,8 @@ const projects = [
         title : 'Mini E-Commerce Website',
         stack : [{name :'bx bxl-javascript text-[#ffdf00]'}, {name : 'bx bxl-html5 text-[#ef6628]'}, {name : 'bx bxl-css3 text-[#016bc1]'} ],
         image : Eco,
-        description: 'A responsive storefront built with HTML, CSS and JavaScript.',
+        description: 'A responsive 3D product storefront built with HTML, CSS and JavaScript.',
+        tagline: 'INTERACTIVE SHOPPING EXPERIENCE',
         github: 'https://github.com/MohamedAmine1113/MiniProject-ECO',
         live :  'https://mohamedamine1113.github.io/MiniProject-ECO/'
         
@@ -37,6 +38,7 @@ const projects = [
         stack : [{name :'bx bxl-wordpress text-[#00779e]'} ],
         image : gym,
         description: 'A modern gym website created with WordPress and Elementor.',
+        tagline: 'FITNESS & DIGITAL EXPERIENCE',
         github: '',
         live :  'https://gym3334.infy.click/'
         
@@ -47,6 +49,7 @@ const projects = [
         stack : [{name :'bx bxl-wordpress text-[#00779e]'}],
         image : shop,
         description: 'A fashion e-commerce website created with WordPress and Elementor.',
+        tagline: 'MODERN FASHION EXPERIENCE',
         github: '',
         live :  'http://shop3344.free.nf/',
         bgcolor : '#f3f3f3'
@@ -125,25 +128,54 @@ const Work_section = () => {
                     ))}
                 </Swiper>
 
-                <div className='min-h-[70px] flex flex-wrap gap-3 justify-between items-center mt-[12px] mb-[16px] mx-[25px] md:mx-[45px] text-[12px] md:text-[16px] md:mt-[10px] xl:text-[20px]'>
-                    <div className='flex-row justify-start it ms-center gap-[20px] '>
-                        
-                        <p className='font-bold text-black name'>{project.num} {project.title}</p>
-                        
-                        <p className='Poppins text-black/70 text-[11px] md:text-[13px] leading-relaxed whitespace-nowrap mt-1'>{project.description}</p>
-                        <div className='tech-stack' aria-label='Technologies used'>
-                            {project.stack.map((tech, index) => (
-                                <i key={index} className={`${tech.name} `}></i>
-                            ))}
+                <div className='px-5 sm:px-8 lg:px-10 pt-6 sm:pt-8 pb-7 sm:pb-9 text-[#111111]'>
+                    <div className='grid grid-cols-1 md:grid-cols-[minmax(0,1.55fr)_minmax(220px,0.85fr)] gap-6 md:gap-8'>
+                        <div className='min-w-0'>
+                            <div className='flex items-center gap-2 mb-3 text-[10px] sm:text-[11px] font-semibold tracking-[0.14em] text-[#EC5938]'>
+                                <span className='w-8 h-[3px] bg-[#EC5938] rounded-full' aria-hidden='true'></span>
+                                <span className='w-1.5 h-1.5 rounded-full bg-[#EC5938]' aria-hidden='true'></span>
+                                <span className='uppercase rounded-full bg-[#EC5938]/10 px-2.5 py-1'>Live Project</span>
+                            </div>
+                            <h2 className='font-Quick text-[22px] sm:text-[28px] lg:text-[32px] font-bold leading-tight tracking-tight'>
+                                {project.num}{project.title}
+                            </h2>
+                            <p className='Poppins text-[#111111]/65 text-[12px] sm:text-[14px] leading-relaxed mt-3 max-w-[650px]'>
+                                {project.description}
+                            </p>
+                            <div className='flex flex-wrap items-center gap-3 sm:gap-4 mt-6' aria-label='Technologies used'>
+                                <span className='uppercase text-[10px] sm:text-[11px] tracking-[0.18em] text-[#111111]/55'>Tech stack</span>
+                                <span className='hidden sm:block h-6 w-px bg-[#111111]/15' aria-hidden='true'></span>
+                                <div className='flex flex-wrap gap-2'>
+                                    {project.stack.map((tech, index) => (
+                                        <span key={index} className='inline-flex items-center justify-center w-9 h-9 rounded-lg border border-[#111111]/10 bg-white/40'>
+                                            <i className={`${tech.name} text-[21px]`} aria-hidden='true'></i>
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
-
+                        <div className='md:border-l border-[#111111]/15 md:pl-7 flex flex-col justify-between gap-5 md:gap-8'>
+                            <div className='flex items-start justify-between md:justify-start gap-4'>
+                                <div className='flex gap-1' aria-hidden='true'>
+                                    <span className='w-5 h-5 rounded-full border border-[#111111]/35'></span>
+                                    <span className='w-5 h-5 -ml-2 rounded-full border border-[#111111]/35'></span>
+                                </div>
+                                <p className='Poppins text-[11px] tracking-[0.17em] font-medium leading-[1.8] text-[#111111]/55 uppercase max-w-[190px] md:ml-2'>{project.tagline}</p>
+                            </div>
+                            <div className='flex flex-wrap gap-2.5'>
+                                <a href={project.live} target='_blank' rel='noopener noreferrer'
+                                    className='inline-flex items-center justify-center gap-2 px-5 min-h-11 rounded-full bg-[#111111] text-[#F5EAE4] text-[12px] sm:text-[13px] font-medium hover:bg-[#EC5938] transition-colors'>
+                                    View Project <span aria-hidden='true'>↗</span>
+                                </a>
+                                {project.github && (
+                                    <a href={project.github} target='_blank' rel='noopener noreferrer'
+                                        className='inline-flex items-center justify-center gap-2 px-5 min-h-11 rounded-full border border-[#111111]/30 text-[#111111] text-[12px] sm:text-[13px] font-medium hover:border-[#EC5938] hover:text-[#EC5938] transition-colors'>
+                                        GitHub <span aria-hidden='true'>↗</span>
+                                    </a>
+                                )}
+                            </div>
+                        </div>
                     </div>
-
-                    <div className='text-black view-project flex flex-wrap items-center gap-3'>
-                        <a href={project.live}  target="_blank" rel="noopener noreferrer" className='  underline front-normal  text-[12px] md:text-[14px]'>View Project ↗</a>
-                        {project.github && <a href={project.github} target='_blank' rel='noopener noreferrer' className='underline text-[12px] md:text-[14px]'>GitHub ↗</a>}
-                    </div>
-
                 </div>
             </div>
             <div className='flex items-center justify-center gap-4 pb-3 text-[#F5EAE4] text-[13px]' aria-label='Project slider controls'>
