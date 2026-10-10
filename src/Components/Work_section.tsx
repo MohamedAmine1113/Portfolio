@@ -104,6 +104,7 @@ const Work_section = () => {
     
         <div className='font-Quick text-clamp-titles mt-[20px] md:mt-[30px] lg:mt-[40px] xl:mt-[60px] w-fit work-titel' >
             <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Works</h1>
+                <p className='max-w-[440px] mx-auto mt-2 mb-5 px-4 text-center font-Instrument text-[12px] sm:text-[14px] leading-relaxed text-[#F5EAE4]/65'>A selection of websites I’ve designed and developed, combining thoughtful design with functional experiences.</p>
         </div>
 
 
