@@ -26,3 +26,5 @@ const GsapMagicIcons: React.FC<GsapMagicIconsProps> = ({ children }) => {
   }, []);
   return <div ref={magnetic}>{children}</div>;
 };
+
+export default GsapMagicIcons;
