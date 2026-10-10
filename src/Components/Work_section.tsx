@@ -75,6 +75,7 @@ const Work_section = () => {
 
     // animation gsap
      useGSAP(() => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
         
 
 
@@ -83,10 +84,11 @@ const Work_section = () => {
 
 
 
-        gsap.from('.work-titel', {
+        gsap.from('#Work_section .work-titel', {
             opacity: 0,
-            duration: 1,
-            scale: 1.05,
+            duration: 0.95,
+            y: 28,
+            scale: 1.025,
             ease: "power4.inOut",
             scrollTrigger: {
                 trigger: '#Work_section',
@@ -96,7 +98,7 @@ const Work_section = () => {
         })
 
 
-    });
+    }, []);
   return (
    
 
@@ -113,7 +115,7 @@ const Work_section = () => {
 
             <div className='work-titel w-[95%] h-auto md:w-[95%] lg:w-[85%] xl:w-[70%] bg-[#F5EAE4] m-auto rounded-[20px]' onMouseEnter={() => scaleCursor(1.5)} onMouseLeave={() => resetCursor(1)} >
                 
-                <Swiper spaceBetween={50} slidesPerView={1} onSwiper={(swiper) => { swiperRef.current = swiper; }} onSlideChange={handleSlideChange} modules={[Keyboard, Mousewheel]} keyboard={{ enabled: true }} mousewheel={{ enabled: true, releaseOnEdges: true, thresholdDelta: 12 }} >
+                <Swiper spaceBetween={50} slidesPerView={1} onSwiper={(swiper) => { swiperRef.current = swiper; }} onSlideChange={handleSlideChange} speed={700} modules={[Keyboard, Mousewheel]} keyboard={{ enabled: true }} mousewheel={{ enabled: true, releaseOnEdges: true, thresholdDelta: 12 }} >
                     {projects.map((project, index) => (
                         <SwiperSlide key={index} >
                             <div className='w-[95%] h-auto relative group flex justify-center items-center m-auto work-titel'>
