@@ -71,9 +71,10 @@ const Contact_section = () => {
   // gsap animation
 
   useGSAP(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
         
 
-  gsap.from('.contact-titel', {
+  gsap.from('#Contact-section .contact-titel', {
       opacity: 0,
       duration: 1,
       scale: 1.05,
@@ -85,10 +86,10 @@ const Contact_section = () => {
       },
   })
 
-  gsap.from(['.email', '.phone', '.social'], {
+  gsap.from(['#Contact-section .email', '#Contact-section .phone', '#Contact-section .social'], {
     y: -10,
     opacity: 0,
-    duration: 1.5,
+    duration: 0.9,
     ease: 'power2.inOut',
     scrollTrigger: {
         trigger: '#Contact-section',
@@ -97,10 +98,10 @@ const Contact_section = () => {
       },
   })
 
-  gsap.from(['.emailLink', '.phoneLink', '.socialLink' ,'.message'], {
-    x: -100,
+  gsap.from(['#Contact-section .emailLink', '#Contact-section .phoneLink', '#Contact-section .socialLink' ,'#Contact-section .message'], {
+    x: -35,
     opacity: 0,
-    duration: 2,
+    duration: 0.95,
     ease: 'power4.inOut',
     clearProps: 'transform',
     scrollTrigger: {
@@ -111,10 +112,10 @@ const Contact_section = () => {
   })
 
 
-  gsap.from('.buttons',{
-    x: -100,
+  gsap.from('#Contact-section .buttons',{
+    x: -35,
     opacity: 0,
-    duration: 2.5,
+    duration: 1.05,
     ease: 'power4.inOut',
     clearProps: 'transform',
     scrollTrigger: {
