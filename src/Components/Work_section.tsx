@@ -136,7 +136,7 @@ const Work_section = () => {
                                 <span className='w-1.5 h-1.5 rounded-full bg-[#EC5938]' aria-hidden='true'></span>
                                 <span className='uppercase rounded-full bg-[#EC5938]/10 px-2.5 py-1'>Live Project</span>
                             </div>
-                            <h2 className='Poppins text-[20px] sm:text-[26px] lg:text-[30px] !font-bold leading-tight tracking-tight'>
+                            <h2 className='Poppins work-project-title text-[20px] sm:text-[26px] lg:text-[30px] leading-tight tracking-tight'>
                                 {project.num}{project.title}
                             </h2>
                             <p className='Poppins text-[#111111]/65 text-[12px] sm:text-[14px] leading-relaxed mt-3 max-w-[650px]'>
@@ -160,7 +160,7 @@ const Work_section = () => {
                                     <span className='w-5 h-5 rounded-full border border-[#111111]/35'></span>
                                     <span className='w-5 h-5 -ml-2 rounded-full border border-[#111111]/35'></span>
                                 </div>
-                                <p className='Poppins text-[11px] tracking-[0.17em] font-medium leading-[1.8] text-[#111111]/55 uppercase max-w-[190px] md:ml-2'>{project.tagline}</p>
+                                <p className='Poppins text-[11px] tracking-[0.17em] font-medium leading-[1.8] text-[#111111]/55 uppercase max-w-[190px] md:ml-2 md:mt-8'>{project.tagline}</p>
                             </div>
                             <div className='flex flex-wrap gap-2.5'>
                                 <a href={project.live} target='_blank' rel='noopener noreferrer'
