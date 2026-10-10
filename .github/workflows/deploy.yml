@@ -2,7 +2,7 @@ name: Deploy Portfolio to GitHub Pages
 on:
   push:
     branches:
-      - improve/portfolio-usability-seo-20261009
+      - main
   workflow_dispatch:
 permissions:
   contents: read
