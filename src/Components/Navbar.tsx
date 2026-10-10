@@ -25,13 +25,14 @@ const Navbar = () => {
   
 
   useGSAP(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     
     const tl = gsap.timeline({
       defaults: {
-        x: 70,
+        x: 35,
         opacity: 0,
         ease: 'power4.inOut',
-        duration: 1,
+        duration: 0.8,
         clearProps: 'transform', // 🔥 VERY IMPORTANT for links
       },
     });
@@ -63,10 +64,10 @@ const Navbar = () => {
   return (
      
       
-      <nav className='w-[100%] z-100'>
+      <nav aria-label='Main navigation' className='w-[100%] z-100'>
         <div className='logo fixed top-[30px] left-[20px]'>
           <a
-              href="Home"
+              href="#Home"
               className={`font-Quick before:content-["{"] after:content-["}"] text-[30px] cursor-pointer `}
               onMouseEnter={() => scaleCursor(4)} 
               onMouseLeave={() => resetCursor(1)}

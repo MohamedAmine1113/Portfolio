@@ -65,3 +65,41 @@ svg:hover{
     fill: #0D0D0D;
     transition: all 0.3s ease-in-out;
 }
+/* Responsive corrections only. Original desktop design remains unchanged. */
+html { scroll-padding-top: 90px; }
+body { overflow-x: hidden; }
+img, video { max-width: 100%; }
+@media (max-width: 767px) {
+  #Home { width: 100%; overflow-x: clip; }
+  #About-section, #Work_section, #Contact-section {
+    height: auto;
+    min-height: 0;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    scroll-margin-top: 70px;
+  }
+  #About-section { gap: 28px; }
+  #About-section .foto { height: auto; }
+  #About-section .foto img { height: auto; object-fit: contain; }
+  #Work_section .work-titel { max-width: 100%; }
+  #Work_section .swiper { width: 100%; }
+  #Contact-section form { max-width: 100%; padding: 0 16px; }
+  #Contact-section .message { max-width: 100%; overflow-wrap: anywhere; }
+  #Contact-section input { max-width: 100%; }
+  #Contact-section .emailLink a { overflow-wrap: anywhere; opacity: .75; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { scroll-behavior: auto !important; }
+}
+
+/* Motion accessibility: preserve the visual design without forced movement. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  #cursor { display: none !important; }
+}
+@media (pointer: coarse) { #cursor { display: none !important; } }
