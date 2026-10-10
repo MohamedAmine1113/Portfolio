@@ -21,12 +21,13 @@ const About = () => {
     
 
     useGSAP(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     
-     gsap.from(['.title', '.text-1', '.text-2', '.text-3'], {
+     gsap.from(['#About-section .title', '#About-section .text-1', '#About-section .text-2', '#About-section .text-3'], {
       opacity: 0,
-      y: 40,
-      duration: 1,
-      stagger: 0.2,
+      y: 48,
+      duration: 0.95,
+      stagger: 0.14,
       ease: 'power4.inOut',
       scrollTrigger: {
         trigger: '#About-section',
@@ -35,10 +36,10 @@ const About = () => {
       },
     });
 
-      gsap.from('.foto', {
+      gsap.from('#About-section .foto', {
         opacity: 0,
         duration: 1,
-        scale: 1.05,
+        scale: 1.035,
         ease: 'power4.inOut',
         scrollTrigger: {
           trigger: '.foto',
@@ -46,10 +47,10 @@ const About = () => {
         }
       })
 
-      gsap.from ('.cvs', {
+      gsap.from ('#About-section .cvs', {
         opacity: 0,
         duration: 1,
-        y: 100,
+        y: 45,
         ease: 'power4.inOut',
         clearProps: 'transform',
         scrollTrigger: {
