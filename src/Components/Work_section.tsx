@@ -119,7 +119,7 @@ const Work_section = () => {
                     {projects.map((project, index) => (
                         <SwiperSlide key={index} >
                             <div className='w-[95%] aspect-[2.1/1] relative group flex justify-center items-center m-auto mt-[16px] overflow-hidden rounded-[20px] bg-[#0D0D0D]'>
-                                <img src={project.image} alt={`${project.title} screenshot`} className='block w-full h-full object-contain' loading='lazy' /> 
+                                <img src={project.image} alt={`${project.title} screenshot`} className='block w-full h-full object-cover' loading='lazy' /> 
                             </div>
                         </SwiperSlide>
                     ))}
