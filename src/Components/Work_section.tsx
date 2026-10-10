@@ -102,7 +102,7 @@ const Work_section = () => {
 
     <div id='Work_section' className=' w-[80%] min-h-[100vh] m-auto max-lg:min-h-[60vh] flex flex-col justify-center-self items-center max-lg:h-auto max-md:h-auto max-md:w-[100%] max-lg:w-[80%]  max-md:w-full  max-lg:mt-[10px] z-1'>
     
-        <div className='font-Quick text-clamp-titles mt-[20px] md:mt-[30px] lg:mt-[40px] xl:mt-[60px] w-fit work-titel' >
+        <div className='font-Quick text-clamp-titles mt-[20px] md:mt-[30px] lg:mt-[40px] xl:mt-[60px] w-fit text-center work-titel' >
             <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Works</h1>
                 <p className='max-w-[440px] mx-auto mt-2 mb-5 px-4 text-center Poppins text-[12px] sm:text-[14px] leading-relaxed text-[#F5EAE4]/65'>A selection of websites I’ve designed and developed, combining thoughtful design with functional experiences.</p>
         </div>
