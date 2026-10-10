@@ -50,7 +50,7 @@ export default function SiteExperience() {
       </div>
 
       <button type="button" aria-label="Back to top" title="Back to top"
-        onClick={() => window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' })}
+        onClick={() => window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })}
         className={`fixed bottom-6 right-6 z-[9997] flex h-11 w-11 items-center justify-center rounded-full border border-[#F5EAE4]/40 bg-[#0D0D0D] text-[#F5EAE4] shadow-lg transition-[opacity,transform] duration-300 hover:border-[#EC5938] hover:text-[#EC5938] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#EC5938] ${showTop ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 translate-y-3'}`}
         tabIndex={showTop ? 0 : -1}
       >↑</button>
