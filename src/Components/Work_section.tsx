@@ -128,7 +128,7 @@ const Work_section = () => {
                         
                         <p className='font-bold text-black name'>{project.num} {project.title}</p>
                         
-                        <p className='Poppins text-black/70 text-[11px] md:text-[13px] leading-relaxed max-w-[380px] mt-1'>{project.description}</p>
+                        <p className='Poppins text-black/70 text-[11px] md:text-[13px] leading-relaxed whitespace-nowrap mt-1'>{project.description}</p>
                         <div className='tech-stack' aria-label='Technologies used'>
                             {project.stack.map((tech, index) => (
                                 <i key={index} className={`${tech.name} `}></i>
