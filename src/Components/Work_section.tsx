@@ -2,7 +2,7 @@
 import { useCursor } from './CursorMotion';
 import { useState, useRef } from 'react'
 
-import Eco from '../assets/Images/ECO.png';
+import Eco from '../assets/Images/Mini E-Commerce Showcase in Orange and Black.png';
 import gym from '../assets/Images/Gym.png';
 import shop from '../assets/Images/shop.png';
 
