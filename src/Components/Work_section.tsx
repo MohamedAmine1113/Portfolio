@@ -115,11 +115,11 @@ const Work_section = () => {
 
             <div className='work-titel w-[95%] h-auto md:w-[95%] lg:w-[85%] xl:w-[70%] bg-[#F5EAE4] m-auto rounded-[20px]' onMouseEnter={() => scaleCursor(1.5)} onMouseLeave={() => resetCursor(1)} >
                 
-                <Swiper autoHeight={true} spaceBetween={50} slidesPerView={1} onSwiper={(swiper) => { swiperRef.current = swiper; }} onSlideChange={handleSlideChange} speed={700} modules={[Keyboard, Mousewheel]} keyboard={{ enabled: true }} mousewheel={{ enabled: true, releaseOnEdges: true, thresholdDelta: 12 }} >
+                <Swiper spaceBetween={50} slidesPerView={1} onSwiper={(swiper) => { swiperRef.current = swiper; }} onSlideChange={handleSlideChange} speed={700} modules={[Keyboard, Mousewheel]} keyboard={{ enabled: true }} mousewheel={{ enabled: true, releaseOnEdges: true, thresholdDelta: 12 }} >
                     {projects.map((project, index) => (
                         <SwiperSlide key={index} >
-                            <div className='w-[95%] h-auto relative group flex justify-center items-center m-auto work-titel'>
-                                <img src={project.image} alt={`${project.title} screenshot`} className='block mt-[16px] rounded-[20px] w-full h-auto object-contain' loading='lazy' /> 
+                            <div className='w-[95%] aspect-[2.1/1] relative group flex justify-center items-center m-auto mt-[16px] overflow-hidden rounded-[20px] bg-[#0D0D0D]'>
+                                <img src={project.image} alt={`${project.title} screenshot`} className='block w-full h-full object-contain' loading='lazy' /> 
                             </div>
                         </SwiperSlide>
                     ))}
