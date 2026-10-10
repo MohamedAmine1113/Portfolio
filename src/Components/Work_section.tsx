@@ -36,7 +36,7 @@ const projects = [
         title : 'Gym Website',
         stack : [{name :'bx bxl-wordpress text-[#00779e]'} ],
         image : gym,
-        description: 'A fitness website focused on clear service presentation.',
+        description: 'A modern gym website created with WordPress and Elementor.',
         github: '',
         live :  'https://gym3334.infy.click/'
         
@@ -46,7 +46,7 @@ const projects = [
         title : 'Clothing Website',
         stack : [{name :'bx bxl-wordpress text-[#00779e]'}],
         image : shop,
-        description: 'A product-focused online clothing storefront.',
+        description: 'A fashion e-commerce website created with WordPress and Elementor.',
         github: '',
         live :  'http://shop3344.free.nf/',
         bgcolor : '#f3f3f3'
