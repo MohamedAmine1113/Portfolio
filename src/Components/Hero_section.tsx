@@ -15,14 +15,17 @@ const Hero_section = () => {
   
     
   useGSAP(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     
 
     const tl = gsap.timeline({
       defaults: {
-        x: -80,
+        x: -54,
+        y: 18,
         opacity: 0,
         ease: 'power4.inOut',
-        duration: 1,
+        duration: 0.85,
+        stagger: 0.1,
         clearProps: 'transform', // 🔥 VERY IMPORTANT for links
       },
     });
@@ -35,15 +38,15 @@ const Hero_section = () => {
     gsap.from('.hero-text', {
       opacity: 0,
       duration: 1,
-      scale: 1.05,
-      ease: "power4.inOut",
+      scale: 1.025,
+      ease: "power3.out",
     })
 
     tl.from('.iconGithub', {x : 0, duration: 0.3})
       .from('.iconLinkedIn', {x : 0,}, '-=0.2')
       .from('.iconEmail', {x : 0,}, '-=0.1');
 
-  });
+  }, []);
    
 
   return (
@@ -51,7 +54,7 @@ const Hero_section = () => {
       <div>
         
       <div className='hero-text'>
-        <Marquee direction="right" speed={80} className="w-full h-fit "  >
+        <Marquee direction="right" speed={80} play={!window.matchMedia("(prefers-reduced-motion: reduce)").matches}> className="w-full h-fit "  >
           <span className=" text-clamp2 uppercase text-outline" onMouseEnter={() => scaleCursor(8)} onMouseLeave={() => resetCursor(1)} >
             Web Designer&nbsp;&amp;&nbsp;Frontend Developer&nbsp;&nbsp;
           </span>
