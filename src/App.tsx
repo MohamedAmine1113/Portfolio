@@ -6,6 +6,7 @@ import Skills from './Components/Skills_section'
 import Work from './Components/Work_section'
 import Contact from './Components/Contact_section'
 import Footer from './Components/Footer'
+import SiteExperience from './Components/SiteExperience'
 
 
 import { CursorProvider } from './Components/CursorMotion'
@@ -21,6 +22,7 @@ const App = () => {
 
   return (
     <div id="Home" className='flex flex-col Poppins font-[400]' >
+      <SiteExperience />
       <CursorProvider >
         <Navbar  />
         
