@@ -103,3 +103,10 @@ img, video { max-width: 100%; }
   #cursor { display: none !important; }
 }
 @media (pointer: coarse) { #cursor { display: none !important; } }
+
+/* Works project titles use the same Poppins family as descriptions, with synthesized bold weight. */
+#Work_section .work-project-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-synthesis: weight;
+}
