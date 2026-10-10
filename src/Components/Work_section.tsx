@@ -115,17 +115,17 @@ const Work_section = () => {
 
             <div className='work-titel w-[95%] h-auto md:w-[95%] lg:w-[85%] xl:w-[70%] bg-[#F5EAE4] m-auto rounded-[20px]' onMouseEnter={() => scaleCursor(1.5)} onMouseLeave={() => resetCursor(1)} >
                 
-                <Swiper spaceBetween={50} slidesPerView={1} onSwiper={(swiper) => { swiperRef.current = swiper; }} onSlideChange={handleSlideChange} speed={700} modules={[Keyboard, Mousewheel]} keyboard={{ enabled: true }} mousewheel={{ enabled: true, releaseOnEdges: true, thresholdDelta: 12 }} >
+                <Swiper autoHeight={true} spaceBetween={50} slidesPerView={1} onSwiper={(swiper) => { swiperRef.current = swiper; }} onSlideChange={handleSlideChange} speed={700} modules={[Keyboard, Mousewheel]} keyboard={{ enabled: true }} mousewheel={{ enabled: true, releaseOnEdges: true, thresholdDelta: 12 }} >
                     {projects.map((project, index) => (
                         <SwiperSlide key={index} >
                             <div className='w-[95%] h-auto relative group flex justify-center items-center m-auto work-titel'>
-                                <img src={project.image} alt={`${project.title} screenshot`} className='mt-[25px] rounded-[20px] w-full h-auto object-contain' loading='lazy' /> 
+                                <img src={project.image} alt={`${project.title} screenshot`} className='block mt-[16px] rounded-[20px] w-full h-auto object-contain' loading='lazy' /> 
                             </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
 
-                <div className='min-h-[70px] flex flex-wrap gap-3 justify-between items-center my-[10px] mx-[25px] md:mx-[45px] text-[12px] md:text-[16px] md:mt-[10px] xl:text-[20px]'>
+                <div className='min-h-[70px] flex flex-wrap gap-3 justify-between items-center mt-[12px] mb-[16px] mx-[25px] md:mx-[45px] text-[12px] md:text-[16px] md:mt-[10px] xl:text-[20px]'>
                     <div className='flex-row justify-start it ms-center gap-[20px] '>
                         
                         <p className='font-bold text-black name'>{project.num} {project.title}</p>
