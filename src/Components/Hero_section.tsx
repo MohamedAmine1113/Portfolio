@@ -54,7 +54,7 @@ const Hero_section = () => {
       <div>
         
       <div className='hero-text'>
-        <Marquee direction="right" speed={80} play={!window.matchMedia("(prefers-reduced-motion: reduce)").matches}> className="w-full h-fit "  >
+        <Marquee direction="right" speed={80} play={!window.matchMedia("(prefers-reduced-motion: reduce)").matches} className="w-full h-fit">
           <span className=" text-clamp2 uppercase text-outline" onMouseEnter={() => scaleCursor(8)} onMouseLeave={() => resetCursor(1)} >
             Web Designer&nbsp;&amp;&nbsp;Frontend Developer&nbsp;&nbsp;
           </span>
