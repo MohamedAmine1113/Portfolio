@@ -25,13 +25,14 @@ const Navbar = () => {
   
 
   useGSAP(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     
     const tl = gsap.timeline({
       defaults: {
-        x: 70,
+        x: 35,
         opacity: 0,
         ease: 'power4.inOut',
-        duration: 1,
+        duration: 0.8,
         clearProps: 'transform', // 🔥 VERY IMPORTANT for links
       },
     });
