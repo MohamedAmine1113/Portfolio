@@ -92,3 +92,14 @@ img, video { max-width: 100%; }
   html { scroll-behavior: auto !important; }
   *, *::before, *::after { scroll-behavior: auto !important; }
 }
+
+/* Motion accessibility: preserve the visual design without forced movement. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  #cursor { display: none !important; }
+}
+@media (pointer: coarse) { #cursor { display: none !important; } }
