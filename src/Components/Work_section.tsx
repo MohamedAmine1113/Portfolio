@@ -104,7 +104,7 @@ const Work_section = () => {
     
         <div className='font-Quick text-clamp-titles mt-[20px] md:mt-[30px] lg:mt-[40px] xl:mt-[60px] w-fit work-titel' >
             <h1 onMouseEnter={() => scaleCursor(3)} onMouseLeave={() => resetCursor(1)} >Works</h1>
-                <p className='max-w-[440px] mx-auto mt-2 mb-5 px-4 text-center font-Quick text-[12px] sm:text-[14px] leading-relaxed text-[#F5EAE4]/65'>A selection of websites I’ve designed and developed, combining thoughtful design with functional experiences.</p>
+                <p className='max-w-[440px] mx-auto mt-2 mb-5 px-4 text-center Poppins text-[12px] sm:text-[14px] leading-relaxed text-[#F5EAE4]/65'>A selection of websites I’ve designed and developed, combining thoughtful design with functional experiences.</p>
         </div>
 
 
@@ -128,7 +128,7 @@ const Work_section = () => {
                         
                         <p className='font-bold text-black name'>{project.num} {project.title}</p>
                         
-                        <p className='font-Quick text-black/70 text-[11px] md:text-[13px] leading-relaxed max-w-[380px] mt-1'>{project.description}</p>
+                        <p className='Poppins text-black/70 text-[11px] md:text-[13px] leading-relaxed max-w-[380px] mt-1'>{project.description}</p>
                         <div className='tech-stack' aria-label='Technologies used'>
                             {project.stack.map((tech, index) => (
                                 <i key={index} className={`${tech.name} `}></i>
