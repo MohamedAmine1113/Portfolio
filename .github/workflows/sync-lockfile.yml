@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/sync-lockfile.yml'
+      - 'package.json'
   workflow_dispatch:
 
 permissions:
@@ -21,9 +22,9 @@ jobs:
         with:
           node-version: '22'
       - name: Regenerate lockfile for existing React dependencies
-        run: npm install --package-lock-only --legacy-peer-deps --ignore-scripts --no-audit --no-fund
+        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
       - name: Check lockfile with npm clean install
-        run: npm ci --legacy-peer-deps --ignore-scripts --no-audit --no-fund
+        run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Commit corrected lockfile
         run: |
           if git diff --quiet -- package-lock.json; then
