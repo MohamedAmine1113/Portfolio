@@ -4,7 +4,6 @@ import { FormEvent } from 'react';
 import { useCursor } from './CursorMotion';
 /* import {motion} from 'framer-motion'; */
 
-import addNotification from 'react-push-notification';
 
 
 import gsap from 'gsap';
@@ -51,12 +50,7 @@ const Contact_section = () => {
       setmessage("");
       setemail("");
   } else {
-    addNotification({
-      title: 'Error',
-      message: 'Something went wrong.',
-      duration: 4000,
-      theme: 'error',
-    });
+    alert('Something went wrong. Please try again.');
   }
   } catch (error) {
     console.error('Contact form failed:', error);
